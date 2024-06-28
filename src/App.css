@@ -1,0 +1,65 @@
+.app-container{
+  font-size: 20px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.top-container{
+  display: flex;
+  margin-top: 25px;
+  gap: 500px;
+}
+
+.name-container{
+  display: flex;
+}
+
+.icon-container{
+  display: flex; flex-direction: row;
+}
+
+.icon-container-style{
+  margin-left: 25px; margin-right: 25px;
+  cursor: pointer;
+}
+
+.icon-container-style:hover{
+  transform: scale(1.1);
+}
+
+.intro-container{
+  margin: 0 auto; text-align: center;
+  margin-top: 200px;
+}
+
+.title{ font-size: 40px; }
+.subtitle{ font-size: 25px; }
+.description{ font-size: 20px; }
+
+.goals-container{
+  margin-right: auto; margin-left: 100px; margin-top: 200px;
+}
+
+.goal-box {
+  border: 1px solid #ccc;
+  padding: 30px;
+  margin-bottom: 40px; margin-top: 30px;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 500px;
+  text-align: center;
+}
+
+.explorations-container{
+  margin-right: auto; margin-left: 100px; margin-top: 50px;
+
+}
+
+footer{
+  display: flex;
+  margin-top: auto; margin-bottom: 20px;
+}
