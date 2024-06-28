@@ -1,4 +1,6 @@
 .app-container{
+  background-color: black;
+  color: white;
   font-size: 20px;
   height: auto;
   display: flex;
@@ -34,34 +36,30 @@
 
 .intro-container{
   margin: 0 auto; text-align: center;
-  margin-top: 200px;
+  margin-top: 300px;
 }
 
 .title{ font-size: 40px; }
 .subtitle{ font-size: 25px; }
 .description{ font-size: 20px; }
 
-.goals-container{
-  margin-right: auto; margin-left: 100px; margin-top: 200px;
-}
-
-.goal-box {
+.box {
   border: 1px solid #ccc;
   padding: 30px;
   margin-bottom: 40px; margin-top: 30px;
   border-radius: 10px;
-  background-color: #f9f9f9;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  width: 500px;
+  width: 95%;
   text-align: center;
 }
 
-.explorations-container{
-  margin-right: auto; margin-left: 100px; margin-top: 50px;
 
+.projects-container, .goals-container, .explorations-container{
+  margin-right: auto; margin-left: 50px; margin-top: 300px;
 }
+
 
 footer{
   display: flex;
-  margin-top: auto; margin-bottom: 20px;
+  margin-top: auto; margin-bottom: 20px; margin-left: 50px; margin-top: 100px;
 }

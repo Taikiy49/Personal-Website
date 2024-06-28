@@ -19,14 +19,25 @@ function App() {
         <div className="description">20 y.o. Software Engineer @ Geolabs</div>
       </div>
 
+
+      <div className="projects-container">Personal Projects...
+        <div class="box">Project 1</div>
+        <div class="box">Project 2</div>
+        <div class="box">Project 3</div>
+        <div class="box">Project 4</div>
+      </div>
+
       <div className="goals-container">Current Goals...
-        <div class="goal-box">Find another internship for summer 2025!</div>
-        <div class="goal-box">Enhance skills in fullstack development!</div>
-        <div class="goal-box">Learn more programming languages!</div>
-        <div class="goal-box">Compete in more Hackathons!</div>
+        <div class="box">Find another internship for summer 2025!</div>
+        <div class="box">Enhance skills in fullstack development!</div>
+        <div class="box">Learn more programming languages!</div>
+        <div class="box">Compete in more Hackathons!</div>
       </div>
 
       <div className="explorations-container">Explorations...
+        <div class="box">Exploration 1</div>
+        <div class="box">Exploration 2</div>
+        <div class="box">Exploration 3</div>
       </div>
 
 
