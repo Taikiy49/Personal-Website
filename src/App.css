@@ -3,22 +3,24 @@
   height: auto;
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-direction: column;
 }
 
 .top-container{
   display: flex;
   margin-top: 25px;
-  gap: 500px;
 }
 
 .name-container{
   display: flex;
+  margin-left: 50px;
+
 }
 
 .icon-container{
   display: flex; flex-direction: row;
+  margin-left: auto;
+  margin-right: 25px;
 }
 
 .icon-container-style{
