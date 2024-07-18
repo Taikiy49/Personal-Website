@@ -1,4 +1,4 @@
-.app-container{
+.app-container {
   background-color: black;
   color: white;
   font-size: 20px;
@@ -8,58 +8,187 @@
   flex-direction: column;
 }
 
-.top-container{
+.top-container {
   display: flex;
   margin-top: 25px;
 }
 
-.name-container{
+.name-container {
   display: flex;
   margin-left: 50px;
-
 }
 
-.icon-container{
-  display: flex; flex-direction: row;
+.icon-container {
+  display: flex;
+  flex-direction: row;
   margin-left: auto;
   margin-right: 25px;
 }
 
-.icon-container-style{
-  margin-left: 25px; margin-right: 25px;
+.icon-container-style {
+  margin-left: 25px;
+  margin-right: 25px;
   cursor: pointer;
 }
 
-.icon-container-style:hover{
+.icon-container-style:hover {
   transform: scale(1.1);
 }
 
-.intro-container{
-  margin: 0 auto; text-align: center;
+.intro-container {
+  margin: 0 auto;
+  text-align: center;
   margin-top: 300px;
 }
 
-.title{ font-size: 40px; }
-.subtitle{ font-size: 25px; }
-.description{ font-size: 20px; }
+.title {
+  font-size: 40px;
+}
+
+.subtitle {
+  font-size: 25px;
+}
+
+.description {
+  font-size: 20px;
+}
+
+.typing, .subtitle.typing, .description.typing {
+  white-space: nowrap; 
+  overflow: hidden; 
+  visibility: hidden;
+  border-right: .15em solid white; /* Cursor */
+  animation: typing 3.5s steps(30, end), blink-caret .75s step-end infinite;
+  animation-fill-mode: forwards; /* Ensure the animation remains in its final state */
+}
+
+.subtitle.typing {
+  animation: typing 3.5s steps(30, end) 3.5s, blink-caret .75s step-end infinite 3.5s;
+}
+
+.description.typing {
+  animation: typing 3.5s steps(30, end) 7s, blink-caret .75s step-end infinite 7s;
+}
+
+.typing-done, .subtitle.typing-done, .description.typing-done {
+  border-right: none; /* Remove the cursor */
+  animation: none; /* Stop blinking */
+  visibility: visible; /* Show text */
+}
+
+@keyframes typing {
+  from { width: 0; visibility: visible; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: white; }
+}
+
+
+.dinosaur-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+
+}
+
+.dinosaur-container img {
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-top: 250px;
+  width: 100px;
+  position: absolute;
+  animation: moveAndFlip 30s linear infinite;
+}
+
+.counter-text {
+  position: absolute;
+  top: 200px; 
+  left: 50px; 
+  font-size: 20px; font-weight: bold;
+  animation: moveCounter 30s linear infinite;
+  margin-top: 130px; margin-left: 44px;
+}
+
+@keyframes moveAndFlip {
+  0%, 25% {
+    left: 100px;
+    transform: scaleX(-1);
+  }
+  50% {
+    left: calc(100% - 200px);
+    transform: scaleX(-1);
+  }
+  50.01%, 75% {
+    left: calc(100% - 200px);
+    transform: scaleX(1);
+  }
+  100% {
+    left: 100px;
+    transform: scaleX(1);
+  }
+}
+
+@keyframes moveCounter {
+  0%, 25% {
+    left: 100px;
+  }
+  50% {
+    left: calc(100% - 200px);
+  }
+  50.01%, 75% {
+    left: calc(100% - 200px);
+  }
+  100% {
+    left: 100px;
+  }
+}
 
 .box {
+  background-color: black;
   border: 1px solid #ccc;
+  cursor: pointer;
   padding: 30px;
-  margin-bottom: 40px; margin-top: 30px;
+  margin-bottom: 40px;
+  margin-top: 30px;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   width: 95%;
   text-align: center;
 }
 
-
-.projects-container, .goals-container, .explorations-container{
-  margin-right: auto; margin-left: 50px; margin-top: 300px;
+.box:hover {
+  transform: scale(1.01);
 }
 
 
-footer{
+.projects-master-container{
+  width: 100%;
+  background-color: rgb(0, 0, 255);
+  height: 850px;
+}
+
+.goals-master-container{
+  width: 100%;
+  background-color: black;
+  height: 850px;
+}
+
+.projects-container,
+.goals-container,
+.explorations-container {
+  margin-top: 50px;
+  margin-right: auto;
+  margin-left: 50px;
+}
+
+footer {
   display: flex;
-  margin-top: auto; margin-bottom: 20px; margin-left: 50px; margin-top: 100px;
+  margin-top: auto;
+  margin-bottom: 20px;
+  margin-left: 50px;
+  margin-top: 100px;
 }
