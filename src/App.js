@@ -28,9 +28,10 @@ const App = () => {
       <div className="top-container">
         <div className="name-container">Taiki Owen Yamashita / 山下大輝</div>
         <div className="icon-container">
-          <div className="discord-icon icon-container-style">Resume</div>
-          <div className="linkedin-icon icon-container-style">Linkedin</div>
-          <div className="github-icon icon-container-style">Github</div>
+          <div className="discord-icon icon-container-style">Home</div>
+          <div className="linkedin-icon icon-container-style">Experience</div>
+          <div className="github-icon icon-container-style">Project</div>
+          <div className="github-icon icon-container-style">Goal</div>
         </div>
       </div>
 
@@ -38,6 +39,12 @@ const App = () => {
         <div className={`title ${titleDone ? 'typing-done' : 'typing'}`}>Hello! I'm Taiki</div>
         <div className={`subtitle ${subtitleDone ? 'typing-done' : 'typing'}`} style={{ animationDelay: '3.5s' }}>I'm a developer!</div>
         <div className={`description ${descriptionDone ? 'typing-done' : 'typing'}`} style={{ animationDelay: '7s' }}>20 y.o. Software Engineer @ Geolabs</div>
+      </div>
+
+      <div className="media-container">
+        <img src='resume.png' alt='resume-link' className='resume-img' />
+        <img src='linkedin.png' alt='linkedin-link' className='linkedin-img' />
+        <img src='github.png' alt='github-link' className='github-img' />
       </div>
 
       <div className="dinosaur-container">

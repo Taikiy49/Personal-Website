@@ -1,4 +1,5 @@
 .app-container {
+  font-family: Arial, Helvetica, sans-serif;
   background-color: black;
   color: white;
   font-size: 20px;
@@ -10,15 +11,23 @@
 
 .top-container {
   display: flex;
-  margin-top: 25px;
+  margin-top: 0; 
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000; /* this ensures that this portion will always be on top of everything as it should */
+  padding: 15px 0; 
 }
 
 .name-container {
+  padding: 10px;
   display: flex;
-  margin-left: 50px;
+  margin-left: 45px;
 }
 
 .icon-container {
+  padding: 10px;
   display: flex;
   flex-direction: row;
   margin-left: auto;
@@ -38,7 +47,7 @@
 .intro-container {
   margin: 0 auto;
   text-align: center;
-  margin-top: 300px;
+  margin-top: 330px;
 }
 
 .title {
@@ -86,11 +95,41 @@
   50% { border-color: white; }
 }
 
+.media-container{
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.resume-img, .linkedin-img, .github-img{
+  cursor: pointer;
+  margin-left: 50px; margin-right: 50px;
+}
+
+.resume-img:hover, .linkedin-img:hover, .github-img:hover{
+  transform: scale(1.1);
+}
+
+.resume-img{
+  width: 60px; 
+  border-radius: 20%;
+}
+
+.linkedin-img{
+  width: 60px;
+  border-radius: 20%;
+}
+
+.github-img{
+  width: 65px;
+  border-radius: 30%;
+}
+
+
 
 .dinosaur-container {
   position: relative;
   width: 100%;
-  height: 400px;
+  height: 420px;
 
 }
 
@@ -99,18 +138,19 @@
   display: block;
   margin-left: auto;
   margin-top: 250px;
-  width: 100px;
+  width: 70px;
   position: absolute;
   animation: moveAndFlip 30s linear infinite;
 }
+
 
 .counter-text {
   position: absolute;
   top: 200px; 
   left: 50px; 
-  font-size: 20px; font-weight: bold;
+  font-size: 10px; font-weight: bold;
   animation: moveCounter 30s linear infinite;
-  margin-top: 130px; margin-left: 44px;
+  margin-top: 132px; margin-left: 34px;
 }
 
 @keyframes moveAndFlip {
@@ -167,7 +207,7 @@
 
 .projects-master-container{
   width: 100%;
-  background-color: rgb(0, 0, 255);
+  background-color: rgba(0, 0, 255, 0.2);
   height: 850px;
 }
 
