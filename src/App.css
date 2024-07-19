@@ -19,33 +19,24 @@
   margin: 0 auto; /* Center the app-container */
 }
 
-/* Ensure flex containers adjust properly */
-.top-container,
-.icon-container,
-.intro-container,
-.media-container,
-.dinosaur-container {
-  flex-wrap: wrap;
-}
 
 /* Rest of your styles */
 .top-container {
   border-bottom: white 1px solid;
-  gap: 20px;
   display: flex;
   margin: 0 auto;
   z-index: 1000;
   padding: 15px;
+  width: 100vw;
 }
 
 .split-container{
   display: flex;
   margin: 0 auto; margin-top: 120px;
-  gap: 50px;
+
 }
 
 .tech-gif{
-  margin-left: -170px;
   background-color: white;
   width: 550px; height: 420px;
 }
@@ -53,14 +44,14 @@
 .name-container {
   padding: 10px;
   display: flex;
+  margin-left: 50px;
 }
 
 .icon-container {
-  margin-top: 3px;
   padding: 10px;
   display: flex;
   flex-direction: row;
-  margin-left: auto;
+  margin-left: auto; margin-right: 50px;
 }
 
 .icon-container-style {
@@ -74,11 +65,9 @@
 }
 
 .intro-container {
-  width: 140%;
   margin: 0 auto;
   text-align: center;
   margin-top: 150px;
-  margin-left: -50px;
 }
 
 .title {
