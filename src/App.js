@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import techGif from './tech.gif';
+
 
 const App = () => {
   const [counter, setCounter] = useState(0);
@@ -26,33 +26,31 @@ const App = () => {
 
   return (
     <div className="app-container">
-      <div className="top-container">
-        <div className="name-container">Taiki Owen Yamashita / 山下大輝</div>
-        <div className="icon-container">
-          <div className="discord-icon icon-container-style">Home</div>
-          <div className="linkedin-icon icon-container-style">Experiences</div>
-          <div className="github-icon icon-container-style">Projects</div>
-          <div className="github-icon icon-container-style">Goals</div>
-        </div>
-      </div>
-
-      <div className='split-container'>
-        <img src={techGif} alt="Tech GIF" className="tech-gif" />
-        
-        <div className='nested-split-container'>
-          <div className="intro-container">
-            <div className={`title ${titleDone ? 'typing-done' : 'typing'}`}>Hello! I'm Taiki</div>
-            <div className={`subtitle ${subtitleDone ? 'typing-done' : 'typing'}`} style={{ animationDelay: '3.5s' }}>I'm a developer!</div>
-            <div className={`description ${descriptionDone ? 'typing-done' : 'typing'}`} style={{ animationDelay: '7s' }}>20 y.o. Software Engineer @ Geolabs</div>
-          </div>
-
-          <div className="media-container">
-            <div className='resume-button'>Resume</div>
-            <div className='linkedin-button'>Linkedin</div>
-            <div className='github-button'>GitHub</div>
+      <div className='first-floor'>
+        <div class="star-field"></div>
+        <div className="top-container">
+          <div className="name-container">Taiki Owen Yamashita / 山下大輝</div>
+          <div className="icon-container">
+            <div className="discord-icon icon-container-style">Home</div>
+            <div className="linkedin-icon icon-container-style">Experiences</div>
+            <div className="github-icon icon-container-style">Projects</div>
+            <div className="github-icon icon-container-style">Goals</div>
           </div>
         </div>
+
+        <div className="intro-container">
+          <div className={`title ${titleDone ? 'typing-done' : 'typing'}`}>Hello! I'm Taiki</div>
+          <div className={`subtitle ${subtitleDone ? 'typing-done' : 'typing'}`} style={{ animationDelay: '3.5s' }}>I'm a developer!</div>
+          <div className={`description ${descriptionDone ? 'typing-done' : 'typing'}`} style={{ animationDelay: '7s' }}>20 y.o. Software Engineer @ Geolabs</div>
+        </div>
+
+        <div className="media-container">
+          <div className='resume-button'>Resume</div>
+          <div className='linkedin-button'>Linkedin</div>
+          <div className='github-button'>GitHub</div>
+        </div>
       </div>
+    
       
 
 

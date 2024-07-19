@@ -5,40 +5,27 @@
 
 /* Adjust .app-container */
 .app-container {
+  min-width: 100%;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #000000;
   color: white;
   font-size: 20px;
-  height: auto;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  max-width: 100%; /* Change from 1920px to 100% for responsiveness */
-  overflow-x: hidden; /* Hide any overflow on the x-axis */
-  padding: 0 20px; /* Add padding to prevent content from touching the edges */
-  margin: 0 auto; /* Center the app-container */
 }
 
+.first-floor {
+  background-color: black;
+  width: 100vw;
+  height: 900px;
+}
 
-/* Rest of your styles */
 .top-container {
-  border-bottom: white 1px solid;
   display: flex;
   margin: 0 auto;
   z-index: 1000;
   padding: 15px;
-  width: 100vw;
-}
-
-.split-container{
-  display: flex;
-  margin: 0 auto; margin-top: 120px;
-
-}
-
-.tech-gif{
-  background-color: white;
-  width: 550px; height: 420px;
+  width: 100%;
 }
 
 .name-container {
@@ -51,7 +38,8 @@
   padding: 10px;
   display: flex;
   flex-direction: row;
-  margin-left: auto; margin-right: 50px;
+  margin-left: auto;
+  margin-right: 50px; margin-top: 3px;
 }
 
 .icon-container-style {
@@ -65,17 +53,19 @@
 }
 
 .intro-container {
+  width: 90%; /* Changed to a percentage */
+  max-width: 300px; /* Optional max-width */
   margin: 0 auto;
+  margin-top: 250px;
   text-align: center;
-  margin-top: 150px;
 }
 
 .title {
-  font-size: 35px;
+  font-size: 35px; margin-bottom: 2px;
 }
 
 .subtitle {
-  font-size: 25px;
+  font-size: 25px; margin-bottom: 10px;
 }
 
 .description {
@@ -106,29 +96,40 @@
 }
 
 @keyframes typing {
-  from { width: 0; visibility: visible; }
-  to { width: 100%; }
+  from {
+    width: 0;
+    visibility: visible;
+  }
+  to {
+    width: 100%;
+  }
 }
 
 @keyframes blink-caret {
-  from, to { border-color: transparent; }
-  50% { border-color: white; }
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
 }
 
 .media-container {
   margin: 0 auto;
-  margin-top: 40px;
+  margin-top: 60px;
   display: flex;
-  gap: 30px;
+  gap: 100px; /* Reduced gap */
   margin-bottom: 450px;
   justify-content: center;
 }
 
 .resume-button, .linkedin-button, .github-button {
   font-size: 18px;
-  border-bottom: 1px solid white;
   cursor: pointer;
-  padding: 5px; 
+  padding: 7px;
+  border-radius: 5px;
+
 }
 
 .resume-button:hover, .linkedin-button:hover, .github-button:hover {
@@ -162,7 +163,8 @@
 }
 
 @keyframes moveAndFlip {
-  0%, 25% {
+  0%,
+  25% {
     left: 100px;
     transform: scaleX(-1);
   }
@@ -170,7 +172,8 @@
     left: calc(100% - 200px);
     transform: scaleX(-1);
   }
-  50.01%, 75% {
+  50.01%,
+  75% {
     left: calc(100% - 200px);
     transform: scaleX(1);
   }
@@ -181,13 +184,15 @@
 }
 
 @keyframes moveCounter {
-  0%, 25% {
+  0%,
+  25% {
     left: 100px;
   }
   50% {
     left: calc(100% - 200px);
   }
-  50.01%, 75% {
+  50.01%,
+  75% {
     left: calc(100% - 200px);
   }
   100% {
@@ -213,13 +218,12 @@
 }
 
 .projects-master-container {
-  width: 100%;
+  width: 100vw;
   background-color: rgba(0, 0, 255, 0.2);
   height: 850px;
 }
 
 .goals-master-container {
-  width: 100%;
   background-color: black;
   height: 850px;
 }
@@ -228,8 +232,6 @@
 .goals-container,
 .explorations-container {
   margin-top: 50px;
-  margin-right: auto;
-  margin-left: 50px;
 }
 
 footer {
@@ -238,4 +240,20 @@ footer {
   margin-bottom: 20px;
   margin-left: 50px;
   margin-top: 100px;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .intro-container {
+    width: 80%; /* Adjust width for smaller screens */
+  }
+
+  .media-container {
+    gap: 20px; /* Adjust gap for smaller screens */
+  }
+
+  .icon-container {
+    flex-direction: column;
+    align-items: flex-end; /* Adjust alignment for smaller screens */
+  }
 }
