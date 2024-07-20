@@ -15,7 +15,7 @@
 }
 
 .first-floor {
-  background-color: black;
+  background-color: #111111;
   width: 100vw;
   height: 900px;
 }
@@ -135,6 +135,11 @@
 .resume-button:hover, .linkedin-button:hover, .github-button:hover {
   transform: scale(1.1);
 }
+
+.planet-img{
+  width: 300px;
+}
+
 
 .dinosaur-container {
   position: relative;

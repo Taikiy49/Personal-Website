@@ -49,6 +49,9 @@ const App = () => {
           <div className='linkedin-button'>Linkedin</div>
           <div className='github-button'>GitHub</div>
         </div>
+
+      
+
       </div>
     
       
