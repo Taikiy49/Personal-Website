@@ -1,27 +1,29 @@
 import './App.css';
-import First from './1-First'; //
-import Second from './2-Second';
+import React, { useState } from 'react';
+import Cover from './1-Cover'; 
+import Projects from './2-Projects';
+import Goals from './3-Goals';
+import Experiences from './4-Experiences';
 
 const App = () => {
+  const [counter, setCounter] = useState(0);
+
+  const handleClick = () => {
+      setCounter(counter + 1);
+  };
+
 
   return (
     <div className="app-container">
-      <First /> 
-      <Second />
+      <Cover /> 
+      <Projects />
+      <Goals />
+      <Experiences />
 
-      <div className="goals-master-container">
-        <div className="goals-container">Current Goals...
-          <div className="box">Find another internship for summer 2025!</div>
-          <div className="box">Enhance skills in fullstack development!</div>
-          <div className="box">Learn more programming languages!</div>
-          <div className="box">Compete in more Hackathons!</div>
-        </div>
-      </div>
 
-      <div className="explorations-container">Explorations...
-        <div className="box">Exploration 1</div>
-        <div className="box">Exploration 2</div>
-        <div className="box">Exploration 3</div>
+      <div className="dinosaur-container">
+        <img src="./dinosaur.png" alt="dinosaur" onClick={handleClick} />
+        <div className="counter-text">{counter}</div>
       </div>
 
       <footer>&copy; 2024 Taiki Yamashita. All rights reserved.</footer>

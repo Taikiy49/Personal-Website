@@ -121,6 +121,7 @@
     margin-left: 25px; margin-right: 25px;
     width: 60px;
     border-radius: 100%;
+    border: 1px solid #ccc; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .linkedin-img:hover, .github-img:hover{ transform: scale(1.1); }
@@ -128,13 +129,13 @@
 
 .contact-info{
     display: flex;
-    margin: 0 auto; margin-top: 75px; margin-bottom: 200px;
+    margin: 0 auto; margin-top: 75px; margin-bottom: 100px;
     gap: 150px;
 }
 
 .contact-box{
     cursor: pointer;
-    border-radius: 20px; padding: 15px;
+    border-radius: 20px; padding: 10px;
     background-color: rgba(25, 0, 255, 0.2);
 }
 

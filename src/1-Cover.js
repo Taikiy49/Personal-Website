@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import './1-First.css';
+import './1-Cover.css';
 
-const First = () => {
+const Cover = () => {
   const [titleDone, setTitleDone] = useState(false);
   const [subtitleDone, setSubtitleDone] = useState(false);
   const [descriptionDone, setDescriptionDone] = useState(false);
@@ -51,4 +51,4 @@ const First = () => {
   );
 };
 
-export default First;
+export default Cover;
