@@ -1,65 +1,12 @@
-import React, { useState, useEffect } from 'react';
 import './App.css';
+import First from './1-First'; //
+import Second from './2-Second';
 
 const App = () => {
-  const [counter, setCounter] = useState(0);
-  const [titleDone, setTitleDone] = useState(false);
-  const [subtitleDone, setSubtitleDone] = useState(false);
-  const [descriptionDone, setDescriptionDone] = useState(false);
-
-  useEffect(() => {
-    const titleTimer = setTimeout(() => setTitleDone(true), 3500); // Typing animation duration for title
-    const subtitleTimer = setTimeout(() => setSubtitleDone(true), 7000); // Typing animation duration for subtitle
-    const descriptionTimer = setTimeout(() => setDescriptionDone(true), 10500); // Typing animation duration for description
-
-    return () => {
-      clearTimeout(titleTimer);
-      clearTimeout(subtitleTimer);
-      clearTimeout(descriptionTimer);
-    };
-  }, []);
-
-  const handleClick = () => {
-    setCounter(counter + 1);
-  };
-
   return (
     <div className="app-container">
-      <div className="top-container">
-        <div className="name-container">Taiki Owen Yamashita / 山下大輝</div>
-        <div className="icon-container">
-          <div className="discord-icon icon-container-style">Home</div>
-          <div className="linkedin-icon icon-container-style">Experience</div>
-          <div className="github-icon icon-container-style">Project</div>
-          <div className="github-icon icon-container-style">Goal</div>
-        </div>
-      </div>
-
-      <div className="intro-container">
-        <div className={`title ${titleDone ? 'typing-done' : 'typing'}`}>Hello! I'm Taiki</div>
-        <div className={`subtitle ${subtitleDone ? 'typing-done' : 'typing'}`} style={{ animationDelay: '3.5s' }}>I'm a developer!</div>
-        <div className={`description ${descriptionDone ? 'typing-done' : 'typing'}`} style={{ animationDelay: '7s' }}>20 y.o. Software Engineer @ Geolabs</div>
-      </div>
-
-      <div className="media-container">
-        <img src='resume.png' alt='resume-link' className='resume-img' />
-        <img src='linkedin.png' alt='linkedin-link' className='linkedin-img' />
-        <img src='github.png' alt='github-link' className='github-img' />
-      </div>
-
-      <div className="dinosaur-container">
-        <img src="./dinosaur.png" alt="dinosaur" onClick={handleClick} />
-        <div className="counter-text">{counter}</div>
-      </div>
-
-      <div className="projects-master-container">
-        <div className="projects-container">Personal Projects...
-          <div className="box">Project 1</div>
-          <div className="box">Project 2</div>
-          <div className="box">Project 3</div>
-          <div className="box">Project 4</div>
-        </div>
-      </div>
+      <First /> 
+      <Second />
 
       <div className="goals-master-container">
         <div className="goals-container">Current Goals...
