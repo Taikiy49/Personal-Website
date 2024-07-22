@@ -1,9 +1,11 @@
 import './App.css';
 import React, { useState } from 'react';
-import Cover from './1-Cover'; 
-import Projects from './2-Projects';
-import Goals from './3-Goals';
-import Experiences from './4-Experiences';
+import Cover from './components/Cover'; 
+import About from './components/About';
+import Projects from './components/Projects';
+import Goals from './components/Goals';
+import Experiences from './components/Experiences';
+
 
 const App = () => {
   const [counter, setCounter] = useState(0);
@@ -15,11 +17,20 @@ const App = () => {
 
   return (
     <div className="app-container">
+      <div className="top-container">
+        <div className="name-container">Taiki Owen Yamashita / 山下大輝</div>
+        <div className="icon-container">
+          <a href='#about' className="icon-container-style">About</a>
+          <a href='#experiences' className="icon-container-style">Experiences</a>
+          <a href='#projects' className="icon-container-style">Projects</a>
+          <a href='#goals' className="icon-container-style">Goals</a>
+        </div>
+      </div>
       <Cover /> 
+      <About />
+      <Experiences />
       <Projects />
       <Goals />
-      <Experiences />
-
 
       <div className="dinosaur-container">
         <img src="./dinosaur.png" alt="dinosaur" onClick={handleClick} />
