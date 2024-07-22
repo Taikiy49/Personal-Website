@@ -15,7 +15,6 @@
 
 
 .experiences-container-floor{
-    background-color: black;
     min-height: 100vh;
 }
 
@@ -28,6 +27,6 @@
 }
 
 .experiences-container-title{
-    margin-top: 100px; margin-bottom: 50px; margin-left: 50px;
+    margin-top: 50px; margin-bottom: 50px; margin-left: 50px;
     font-size: 30px; font-weight: bold;
 }

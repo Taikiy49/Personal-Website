@@ -18,11 +18,7 @@ const App = () => {
   return (
     <div className="app-container">
       <div className="top-container">
-        <div className="contact-container">
-          <div className='name'>Taiki Owen Yamashita / 山下大輝</div>
-          <div className='email'>taiki49@gmail.com</div>
-          <div className='phone'>(808) 450-5767</div>
-        </div>
+        <div className='contact-container'>Taiki Owen Yamashita / 山下大輝</div>
         <div className="icon-container">
           <a href='#about' className="icon-container-style">About</a>
           <a href='#experiences' className="icon-container-style">Experiences</a>
@@ -47,3 +43,5 @@ const App = () => {
 };
 
 export default App;
+
+// #0B0C10, #1F2833, #C5C6C7, #66FCF1, #45A29E

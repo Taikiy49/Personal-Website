@@ -35,7 +35,8 @@ const Cover = () => {
 
   return (
     <div className='cover-container-floor'>
-      <div className="scroll-indicator"></div> {/* Scroll Indicator */}
+      <div className="scroll-indicator"></div>
+      <div className='sliding-bar top-bar'></div> {/* Top sliding bar */}
       <div className="intro-container"> 
         <img src='taiki-img.png' className='taiki-img' alt='taiki-image'/>
         <div className='typing-container'>
@@ -51,6 +52,7 @@ const Cover = () => {
           </div>
         </div>
       </div>
+      <div className='sliding-bar bottom-bar'></div> {/* Bottom sliding bar */}
     </div>
   );
 };

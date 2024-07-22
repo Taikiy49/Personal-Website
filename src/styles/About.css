@@ -3,7 +3,6 @@
   flex-direction: column;
   justify-content: center;
   min-height: 100vh;
-  background-color: rgb(0, 0, 30);
   position: relative;
   overflow: hidden;
 }
@@ -21,15 +20,14 @@
 }
 
 .about-container-title, .projects-title {
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
-  color: white;
+  color: #FFFFFF;
   font-size: 40px;
   margin: 20px 0;
   text-align: center;
 }
 
 .about-description {
-  color: white;
+  color: #C5C6C7;
   font-size: 25px;
   text-align: center;
   margin: 20px 0;
