@@ -14,9 +14,6 @@
   width: 80%;
   max-width: 1200px;
   padding: 20px;
-  opacity: 0; /* Start hidden */
-  transform: translateY(50px); /* Start with an offset */
-  transition: opacity 2s ease-out, transform 2s ease-out; /* Smooth transition */
 }
 
 .about-container-title, .projects-title {
