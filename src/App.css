@@ -1,55 +1,59 @@
 .app-container {
   font-family: Arial, Helvetica, sans-serif;
   color: white;
+  background-color: black;
   font-size: 20px;
   display: flex;
   justify-content: center;
   flex-direction: column;
+  width: 100%;
 }
 
 .top-container {
-  background-color: black;
-  padding: 10px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.85)); 
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
   display: flex;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
+  flex-wrap: wrap; /* Allow items to wrap */
+  width: 90%;
+  margin: 30px auto;
   z-index: 1000; 
-  padding: 15px 0; 
+  padding: 10px;
 }
 
-
-.name-container {
+.contact-container {
   display: flex;
-  margin-left: 45px;
+  flex-wrap: wrap; /* Allow items to wrap */
+  margin-left: 40px;
+  gap: 40px;
+}
+
+.phone, .email {
+  margin-top: 4px;
 }
 
 .icon-container {
   display: flex;
   flex-direction: row;
-  margin-left: auto;
-  margin-right: 25px;
+  margin-left: auto; margin-right: 50px; margin-top: 4px;
+  flex-wrap: wrap; 
 }
 
 .icon-container-style {
-  margin-left: 25px;
-  margin-right: 25px;
-  cursor: pointer;
   color: white;
+  cursor: pointer;
   text-decoration: none;
+  margin-left: 40px;
 }
 
 .icon-container-style:hover {
   transform: scale(1.1);
 }
 
-
 .dinosaur-container {
   margin-top: 50px;
   position: relative;
   height: 100px;
-
 }
 
 .dinosaur-container img {
@@ -65,7 +69,8 @@
   position: absolute;
   top: 80px; 
   left: 50px; 
-  font-size: 10px; font-weight: bold;
+  font-size: 10px; 
+  font-weight: bold;
   animation: moveCounter 30s linear infinite;
   margin-left: 34px;
 }
@@ -104,11 +109,29 @@
   }
 }
 
-
 footer {
   display: flex;
   margin-top: auto;
   margin-bottom: 20px;
   margin-left: 50px;
   margin-top: 100px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .top-container {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-container, .icon-container {
+    margin-left: 0;
+    margin-right: 0;
+    justify-content: center;
+  }
+
+  .icon-container-style {
+    margin: 10px 5px; /* Adjusted for smaller screens */
+  }
 }

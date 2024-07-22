@@ -14,8 +14,8 @@
 }
 
 .projects-container-floor{
-  height: 1080px;
-  background-color: rgba(0, 0, 255, 0.1);
+  min-height: 100vh;
+  background-color: rgb(0, 0, 30);
 }
 
 .projects-container {

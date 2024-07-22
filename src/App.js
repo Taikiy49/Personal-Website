@@ -18,7 +18,11 @@ const App = () => {
   return (
     <div className="app-container">
       <div className="top-container">
-        <div className="name-container">Taiki Owen Yamashita / 山下大輝</div>
+        <div className="contact-container">
+          <div className='name'>Taiki Owen Yamashita / 山下大輝</div>
+          <div className='email'>taiki49@gmail.com</div>
+          <div className='phone'>(808) 450-5767</div>
+        </div>
         <div className="icon-container">
           <a href='#about' className="icon-container-style">About</a>
           <a href='#experiences' className="icon-container-style">Experiences</a>

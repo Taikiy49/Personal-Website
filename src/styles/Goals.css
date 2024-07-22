@@ -14,7 +14,7 @@
 }       
 
 .goals-container-floor{
-    height: 1080px;
+    min-height: 100vh;
 }
 
 .goals-container {

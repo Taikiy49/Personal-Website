@@ -15,8 +15,8 @@
 
 
 .experiences-container-floor{
-    background-color: rgba(0, 0, 255, 0.1);
-    height: 1080px;
+    background-color: black;
+    min-height: 100vh;
 }
 
 
