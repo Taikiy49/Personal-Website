@@ -1,6 +1,7 @@
 .box {
-    background-color: black;
-    border: 1px solid #ccc; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid #66FCF1;
+    background-color: #0B0C10;
+    color: #C5C6C7;
     cursor: pointer;
     padding: 30px;
     margin-bottom: 40px; margin-left: 50px;
@@ -16,6 +17,7 @@
 
 .experiences-container-floor{
     min-height: 100vh;
+    color: #FFFFFF;
 }
 
 

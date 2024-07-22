@@ -17,16 +17,6 @@ const About = () => {
       },
       { threshold: 0.1 } // Trigger the animation when 10% of the element is visible
     );
-
-    if (aboutContainerRef.current) {
-      observer.observe(aboutContainerRef.current);
-    }
-
-    return () => {
-      if (aboutContainerRef.current) {
-        observer.unobserve(aboutContainerRef.current);
-      }
-    };
   }, []);
 
   return (
