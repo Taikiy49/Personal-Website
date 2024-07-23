@@ -38,7 +38,6 @@ const Cover = () => {
       <div className="scroll-indicator"></div>
       <div className='sliding-bar top-bar'></div> {/* Top sliding bar */}
       <div className="intro-container"> 
-        <img src='taiki-img.png' className='taiki-img' alt='taiki-image'/>
         <div className='typing-container'>
           <div className={`title ${titleDone ? 'typing-done' : 'typing'}`}>Hello! I'm Taiki</div>
           <div className={`subtitle ${subtitleDone ? 'typing-done' : 'typing'}`} style={{ animationDelay: '3.5s' }}>I'm a developer!</div>

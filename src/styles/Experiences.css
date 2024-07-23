@@ -1,12 +1,10 @@
 .box {
     border: 1px solid #66FCF1;
-    background-color: #0B0C10;
-    color: #C5C6C7;
+    color: #FFFFFF;
     cursor: pointer;
-    padding: 30px;
-    margin-bottom: 40px; margin-left: 50px;
+    padding: 30px; margin: 0 auto; margin-top: 50px; margin-bottom: 50px;
     border-radius: 10px;
-    width: 200px;
+    width: 350px;
     text-align: center;
 }
 
@@ -24,11 +22,31 @@
 .experiences-container {
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
+    justify-content: center;
 
 }
 
 .experiences-container-title{
     margin-top: 50px; margin-bottom: 50px; margin-left: 50px;
     font-size: 30px; font-weight: bold;
+}
+
+t{
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+
+.geolabs-img{   
+    display: flex;
+    margin: 0 auto;
+    width: 1000px;
+}
+
+.geolabs-description, .nsf-description, .la-description{
+    display: flex;
+    margin: 0 auto;
+    width: 80%;
+    color: #C5C6C7;
+    margin-bottom: 50px;
 }

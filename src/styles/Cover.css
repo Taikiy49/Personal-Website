@@ -16,18 +16,12 @@
   }
 }
 
-.taiki-img {
-  opacity: 0.7;
-  max-width: 450px;
-  max-height: 400px;
-  border-radius: 100%;
-  animation: easeIn 5s ease-out forwards;
-}
+
 
 .intro-container {
   display: flex;
   flex-direction: row;
-  margin: 0 auto; margin-top: 200px; margin-bottom: 200px;
+  margin: 0 auto; margin-top: 100px; margin-bottom: 150px;
   text-align: center;
   gap: 100px;
   position: relative;
@@ -42,19 +36,19 @@
 }
 
 .title {
-  font-size: 40px; 
+  font-size: 65px; 
   margin-bottom: 10px; 
   color: #FFFFFF;
 }
 
 .subtitle {
-  font-size: 30px; 
-  margin-bottom: 5px;
+  font-size: 35px; 
+  margin-bottom: 10px;
   color: #C5C6C7;
 }
 
 .description {
-  font-size: 20px; 
+  font-size: 22px; 
   margin-bottom: 5px;
   color: #C5C6C7;
 }
