@@ -1,14 +1,24 @@
-html, body {
-  overflow-x: hidden;
-  margin: 0;
-  padding: 0;
-  width: 100%;
+html {
+  --section-background-color: linear-gradient(
+    to bottom left,
+    rgba(17, 16, 16, 0.582),
+    rgba(12, 8, 24, 0.904)
+  );
+
+  --image-gradient: linear-gradient(
+    to bottom left,
+    rgba(17, 16, 16, 0.678),
+    rgba(12, 10, 22, 0.863)
+  );
+
+  --imp-text-color: #7470f0;
 }
 
 .app-container {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: sans-serif;
   color: #C5C6C7;
-  background-color: #0B0C10;
+  background-image: var(--image-gradient), url(home-bg.jpg);
+  background-size: cover;
   font-size: 20px; 
   display: flex;
   justify-content: center;
@@ -18,16 +28,16 @@ html, body {
 
 .top-container {
   display: flex;
-  flex-wrap: wrap; /* Allow items to wrap */
+  flex-wrap: wrap;
   width: 90%;
   margin: 30px auto;
-  z-index: 1000; 
+  z-index: 1; 
   padding: 10px; 
 }
 
 .contact-container {
   display: flex;
-  flex-wrap: wrap; /* Allow items to wrap */
+  flex-wrap: wrap;
   margin-left: 40px;
   gap: 40px;
 }
@@ -39,7 +49,9 @@ html, body {
 .icon-container {
   display: flex;
   flex-direction: row;
-  margin-left: auto; margin-right: 50px; margin-top: 4px;
+  margin-left: auto; 
+  margin-right: 50px; 
+  margin-top: 4px;
   flex-wrap: wrap; 
 }
 
@@ -136,6 +148,6 @@ footer {
   }
 
   .icon-container-style {
-    margin: 10px 5px; /* Adjusted for smaller screens */
+    margin: 10px 5px;
   }
 }

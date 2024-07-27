@@ -1,4 +1,5 @@
 import '../styles/Experiences.css'
+import React from 'react';
 
 const Experiences = () => {
     return (

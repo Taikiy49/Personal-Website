@@ -1,4 +1,5 @@
 import '../styles/Projects.css'
+import React from 'react';
 
 
 const Projects = () => {
