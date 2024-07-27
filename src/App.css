@@ -1,4 +1,8 @@
+/* App.css */
+
+/* Variables */
 html {
+  text-shadow: 0 0 1px #fff, 0 0 20px black;
   --section-background-color: linear-gradient(
     to bottom left,
     rgba(17, 16, 16, 0.582),
@@ -7,33 +11,47 @@ html {
 
   --image-gradient: linear-gradient(
     to bottom left,
-    rgba(17, 16, 16, 0.678),
-    rgba(12, 10, 22, 0.863)
+    rgba(17, 16, 16, 0.999),
+    rgba(12, 10, 22, 0.05)
   );
 
   --imp-text-color: #7470f0;
 }
 
-.app-container {
-  font-family: sans-serif;
-  color: #C5C6C7;
-  background-image: var(--image-gradient), url(home-bg.jpg);
-  background-size: cover;
-  font-size: 20px; 
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  width: 100%;
+@keyframes move {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
 }
 
+/* App container */
+.app-container {
+  font-family: sans-serif;
+  color: #b6e9ff;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  background-image: var(--image-gradient), url(./background.jpg);
+  background-size: 200%;
+  overflow: hidden; /* Prevent overflow */
+}
+
+/* Top container */
 .top-container {
+  color: #b6e9ff;
   display: flex;
   flex-wrap: wrap;
   width: 90%;
   margin: 30px auto;
-  z-index: 1; 
-  padding: 10px; 
+  z-index: 1; /* Ensure this content is above the particles */
+  padding: 10px;
 }
+
 
 .contact-container {
   display: flex;
@@ -42,21 +60,23 @@ html {
   gap: 40px;
 }
 
-.phone, .email {
+.phone,
+.email {
   margin-top: 4px;
 }
 
+/* Icon container */
 .icon-container {
   display: flex;
   flex-direction: row;
-  margin-left: auto; 
-  margin-right: 50px; 
+  margin-left: auto;
+  margin-right: 50px;
   margin-top: 4px;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
 }
 
 .icon-container-style {
-  color: #C5C6C7;
+  color: #b6e9ff;
   cursor: pointer;
   text-decoration: none;
   margin-left: 40px;
@@ -66,6 +86,7 @@ html {
   transform: scale(1.1);
 }
 
+/* Dinosaur container */
 .dinosaur-container {
   margin-top: 50px;
   position: relative;
@@ -83,16 +104,18 @@ html {
 
 .counter-text {
   position: absolute;
-  top: 80px; 
-  left: 50px; 
-  font-size: 10px; 
+  top: 80px;
+  left: 50px;
+  font-size: 10px;
   font-weight: bold;
   animation: moveCounter 30s linear infinite;
   margin-left: 34px;
 }
 
+/* Keyframes for animations */
 @keyframes moveAndFlip {
-  0%, 25% {
+  0%,
+  25% {
     left: 200px;
     transform: scaleX(-1);
   }
@@ -100,7 +123,8 @@ html {
     left: calc(100% - 300px);
     transform: scaleX(-1);
   }
-  50.01%, 75% {
+  50.01%,
+  75% {
     left: calc(100% - 300px);
     transform: scaleX(1);
   }
@@ -111,13 +135,15 @@ html {
 }
 
 @keyframes moveCounter {
-  0%, 25% {
+  0%,
+  25% {
     left: 200px;
   }
   50% {
     left: calc(100% - 300px);
   }
-  50.01%, 75% {
+  50.01%,
+  75% {
     left: calc(100% - 300px);
   }
   100% {
@@ -125,12 +151,14 @@ html {
   }
 }
 
+/* Footer styling */
 footer {
   display: flex;
   margin-top: auto;
   margin-bottom: 20px;
   margin-left: 50px;
   margin-top: 100px;
+  z-index: 1; /* Ensure this content is above the particles */
 }
 
 /* Media Queries for Responsiveness */
@@ -141,7 +169,8 @@ footer {
     align-items: center;
   }
 
-  .contact-container, .icon-container {
+  .contact-container,
+  .icon-container {
     margin-left: 0;
     margin-right: 0;
     justify-content: center;

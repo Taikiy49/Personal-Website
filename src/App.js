@@ -32,9 +32,9 @@ const App = () => {
       <Goals />
       <div className="dinosaur-container">
         <img src="./dinosaur.png" alt="dinosaur" onClick={handleClick} />
-        <div className="counter-text">{counter}</div>
+        <div className="counter-text glow">{counter}</div>
       </div>
-      <footer>&copy; 2024 Taiki Yamashita. All rights reserved.</footer>
+      <footer className="glow">&copy; 2024 Taiki Yamashita. All rights reserved.</footer>
     </div>
   );
 };
