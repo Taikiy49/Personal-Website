@@ -31,7 +31,7 @@ const Cover = () => {
           <div className={`description ${descriptionDone ? 'typing-done' : 'typing'}`} style={{ animationDelay: '7s' }}>Data Scientist @ National Science Foundation</div> */}
           <div className='subtitle'><Type/></div>
         </div>
-        <img src='engineer.png' className='engineer-img'/>
+        <img src='taiki-image.png' className='taiki-img'/>
       </div>
     </div>
   );

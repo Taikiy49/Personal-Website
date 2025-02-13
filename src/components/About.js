@@ -6,7 +6,6 @@ const About = () => {
     <div id='about' className='about-container-floor'>
     <div className='about-container-title'>About Me</div>
       <div className="about-container">
-        <img src='taiki-img.png' className='taiki-img' alt='taiki'/>
         <div className='about-description'>
         Hey there! I’m Taiki Owen Yamashita, a dynamic Software Engineer at Geolabs and a cutting-edge Data Scientist with the National Science Foundation. I thrive on building innovative solutions and diving deep into new technologies.
         At Geolabs, I revolutionize engineering workflows by developing software that leverages advanced algorithms and data processing techniques. My role as a Data Scientist at NSF allows me to unravel complex datasets using statistical analysis and machine learning, turning raw data into impactful insights.

@@ -8,11 +8,6 @@ import Goals from './components/Goals';
 import Experiences from './components/Experiences';
 
 const App = () => {
-  const [counter, setCounter] = useState(0);
-
-  const handleClick = () => {
-    setCounter(counter + 1);
-  };
 
   return (
     <div className="app-container">
@@ -30,10 +25,6 @@ const App = () => {
       <Experiences />
       <Projects />
       <Goals />
-      <div className="dinosaur-container">
-        <img src="./dinosaur.png" alt="dinosaur" onClick={handleClick} />
-        <div className="counter-text glow">{counter}</div>
-      </div>
       <footer className="glow">&copy; 2024 Taiki Yamashita. All rights reserved.</footer>
     </div>
   );
