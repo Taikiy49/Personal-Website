@@ -1,52 +1,124 @@
-.box {
-    border: 1px solid #66FCF1;
-    color: #FFFFFF;
-    cursor: pointer;
-    padding: 30px; margin: 0 auto; margin-top: 50px; margin-bottom: 50px;
-    border-radius: 10px;
-    width: 350px;
-    text-align: center;
-}
-
-.box:hover {
-    transform: scale(1.01); 
-}       
-
-
-.experiences-container-floor{
-    min-height: 100vh;
-    color: #FFFFFF;
-}
-
-
 .experiences-container {
+    margin-top: 50vh;
+    height: 150vh;
+    width: 100vw;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-
 }
 
-.experiences-container-title{
-    margin-top: 50px; margin-bottom: 50px; margin-left: 50px;
-    font-size: 30px; font-weight: bold;
+.experiences-title {
+    color: #3ac0fa;
+    font-size: 50px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-t{
-    font-weight: bold;
-    color: #FFFFFF;
+/* GEO */
+.geolabs-container {
+    margin-top: 10vh;
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-
-.geolabs-img{   
-    display: flex;
-    margin: 0 auto;
-    width: 1000px;
+.geolabs-title {
+    color: #b6e9ff;
+    font-size: 30px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.geolabs-description, .nsf-description, .la-description{
-    display: flex;
-    margin: 0 auto;
-    width: 80%;
-    color: #C5C6C7;
-    margin-bottom: 50px;
+.geolabs-description {
+    color: rgb(210, 210, 210);
+    margin-top: 10px;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/* NSF */
+.nsf-container {
+    margin-top: 10vh;
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nsf-title {
+    color: #ffdb99;
+    font-size: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nsf-description {
+    color: rgb(210, 210, 210);
+    margin-top: 10px;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/* Grader */
+.grader-container {
+    margin-top: 10vh;
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.grader-title {
+    color: #9dd9d2;
+    font-size: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.grader-description {
+    color: rgb(210, 210, 210);
+    margin-top: 10px;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/* Learning Assistant */
+.la-container {
+    margin-top: 10vh;
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.la-title {
+    color: #b8c7f9;
+    font-size: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.la-description {
+    color: rgb(210, 210, 210);
+    margin-top: 10px;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/* Tutoring */
+.tutoring-container {
+    margin-top: 10vh;
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tutoring-title {
+    color: #ffd6e0;
+    font-size: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tutoring-description {
+    color: rgb(210, 210, 210);
+    margin-top: 10px;
+    font-size: 18px;
+    line-height: 1.5;
 }

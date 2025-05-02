@@ -15,7 +15,7 @@ html{
   justify-content: center;
   width: 100%;
   background-size: 200%;
-  overflow: hidden; /* Prevent overflow */
+  overflow: hidden; 
 }
 
 /* Top container */
