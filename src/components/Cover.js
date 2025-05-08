@@ -23,13 +23,14 @@ const Cover = () => {
     <div className='cover-container-floor'>
       <div className="scroll-indicator"></div>
       <div className="intro-container"> 
+      <img src='./taiki-img.png' className='taiki-img'/>
         <div className='typing-container'>
-          <div className='title'>I'm Taiki Yamashita</div>
+          <div className='title'>Taiki Yamashita</div>
           {/* <div className={`description ${descriptionDone ? 'typing-done' : 'typing'}`} style={{ animationDelay: '7s' }}>20 y.o. Software Engineer @ Geolabs</div>
           <div className={`description ${descriptionDone ? 'typing-done' : 'typing'}`} style={{ animationDelay: '7s' }}>Data Scientist @ National Science Foundation</div> */}
           <div className='subtitle'><Type/></div>
         </div>
-        <img src='./taiki-img.png' className='taiki-img'/>
+  
       </div>
     </div>
   );

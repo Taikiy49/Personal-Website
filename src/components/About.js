@@ -1,18 +1,61 @@
 import '../styles/About.css';
 import React from 'react';
+import { FaLaptopCode, FaFlask, FaDatabase, FaUserGraduate, FaChalkboardTeacher } from 'react-icons/fa';
 
 const About = () => {
-  return (
-      <div className="about-container">
-        <div className='about-title'>About Me...</div>
-        <img src='./taiki-img2.png' className='taiki-img2'/>
+  const items = [
+    {
+      label: 'Software Engineer',
+      icon: <FaLaptopCode size={40} />,
+      description: 'Built advanced software to boost engineering productivity.',
+      link: 'https://geolabs.com',
+    },
+    {
+      label: 'Data Scientist',
+      icon: <FaFlask size={40} />,
+      description: 'Analyzed complex datasets with machine learning.',
+      link: 'https://nsf.gov',
+    },
+    {
+      label: 'Tutor / Mentor',
+      icon: <FaUserGraduate size={40} />,
+      description: 'Supported students and graded CS assignments.',
+      link: 'https://uci.edu',
+    },
+    {
+      label: 'Golfer & Pickleballer',
+      icon: <FaChalkboardTeacher size={40} />,
+      description: 'Tutored students in coding and mathematics.',
+      link: 'https://honolulututoring.com',
+    },
+  ];
 
-        <div className='about-description'>
-          Hey there! I’m Taiki Owen Yamashita, a dynamic Software Engineer at Geolabs and a cutting-edge Data Scientist with the National Science Foundation. I thrive on building innovative solutions and diving deep into new technologies.
-          At Geolabs, I revolutionize engineering workflows by developing software that leverages advanced algorithms and data processing techniques. My role as a Data Scientist at NSF allows me to unravel complex datasets using statistical analysis and machine learning, turning raw data into impactful insights.
-          I’m passionate about front-end development, crafting visually stunning and user-friendly interfaces with HTML, CSS, JavaScript, and React. My coding arsenal includes Python, C/C++, SQL, and R, enabling me to tackle everything from backend development to sophisticated data analysis.
-        </div>
+  const handleButtonClick = (link) => {
+    window.open(link, '_blank');
+  };
+
+  return (
+    <div className="about-container">
+      <div className="black-table">
+        {items.map((item, index) => (
+          <div key={index} className="black-table-box">
+            <div className="box-content">
+              {item.icon}
+              <h3>{item.label}</h3>
+              <p>{item.description}</p>
+              <button onClick={() => handleButtonClick(item.link)}>Learn More</button>
+            </div>
+          </div>
+        ))}
       </div>
+
+      <div className='about-title'>About Me...</div>
+      <img src='./taiki-img2.png' className='taiki-img2'/>
+
+      <div className='about-description'>
+        Hey there! I’m Taiki Owen Yamashita, a dynamic Software Engineer at Geolabs and a cutting-edge Data Scientist with the National Science Foundation...
+      </div>
+    </div>
   );
 };
 

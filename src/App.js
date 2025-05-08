@@ -14,6 +14,7 @@ const App = () => {
       <div className="top-container">
         <div className="contact-container">Taiki Owen Yamashita / 山下大輝</div>
         <div className="icon-container">
+          <a href="#home" className="icon-home-style">Home</a>
           <a href="#about" className="icon-container-style">About</a>
           <a href="#experiences" className="icon-container-style">Experiences</a>
           <a href="#projects" className="icon-container-style">Projects</a>

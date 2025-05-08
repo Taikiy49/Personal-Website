@@ -2,14 +2,15 @@
 
 /* Variables */
 html{
+  color: white;
+  font-weight: bold;
   background-color: black;
 }
 
 /* App container */
 .app-container {
-  font-family: sans-serif;
-  color: #b6e9ff;
-  font-size: 20px;
+  background-color: rgb(10, 10, 10);
+  font-size: 17px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -18,57 +19,64 @@ html{
   overflow: hidden; 
 }
 
-/* Top container */
 .top-container {
-  color: #b6e9ff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background-color: black;
+  border-bottom: 1px solid rgb(80, 80, 80);
   display: flex;
   flex-wrap: wrap;
-  width: 90%;
-  margin: 30px auto;
-  z-index: 1; /* Ensure this content is above the particles */
-  padding: 10px;
+  padding-top: 2vh;
+  z-index: 1000; /* make sure it’s above other content */
 }
 
 
 .contact-container {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 40px;
-  gap: 40px;
+  margin-left: 5vw;
+  margin-bottom: 2vh;
 }
 
-.phone,
-.email {
-  margin-top: 4px;
-}
 
-/* Icon container */
-.icon-container {
-  display: flex;
-  flex-direction: row;
-  margin-left: auto;
-  margin-right: 50px;
-  margin-top: 4px;
-  flex-wrap: wrap;
-}
-
-.icon-container-style {
-  color: #b6e9ff;
+.icon-home-style{
+  color: rgb(240, 240, 240);
   cursor: pointer;
   text-decoration: none;
   margin-left: 40px;
 }
 
-.icon-container-style:hover {
+.icon-home-style:hover {
   transform: scale(1.1);
+  color: white;
 }
 
-/* Dinosaur container */
-.dinosaur-container {
-  margin-top: 50px;
-  position: relative;
-  height: 100px;
+
+.icon-container {
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  margin-right: 5vw;
+  margin-bottom: 2vh;
+  flex-wrap: wrap;
+
 }
+
+
+.icon-container-style {
+  color: rgb(210, 210, 210);
+  cursor: pointer;
+  text-decoration: none;
+  margin-left: 30px;
+}
+
+.icon-container-style:hover {
+  transform: scale(1.1);
+  color: white;
+}
+
 
 .dinosaur-container img {
   cursor: pointer;
@@ -128,32 +136,4 @@ html{
   }
 }
 
-/* Footer styling */
-footer {
-  display: flex;
-  margin-top: auto;
-  margin-bottom: 20px;
-  margin-left: 50px;
-  margin-top: 100px;
-  z-index: 1; /* Ensure this content is above the particles */
-}
 
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-  .top-container {
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .contact-container,
-  .icon-container {
-    margin-left: 0;
-    margin-right: 0;
-    justify-content: center;
-  }
-
-  .icon-container-style {
-    margin: 10px 5px;
-  }
-}
