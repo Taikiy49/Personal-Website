@@ -15,11 +15,11 @@
 }
 
 .intro-container {
+  margin-top: 2vh;
   width: 100vw;
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding-top: 80px;  /* match or slightly exceed the header height */
 }
 
 
@@ -135,18 +135,6 @@
   }
   100% {
     right: 100%;
-  }
-}
-
-
-
-@media (max-width: 768px) {
-  .top-container {
-    height: 80px;
-  }
-
-  .intro-container {
-    padding-top: 100px;
   }
 }
 
