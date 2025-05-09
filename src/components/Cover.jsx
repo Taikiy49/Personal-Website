@@ -25,7 +25,7 @@ const Cover = () => {
         <div className='typing-container'>
           <div className='title'>Taiki Yamashita</div>
           {/* <div className={`description ${descriptionDone ? 'typing-done' : 'typing'}`} style={{ animationDelay: '7s' }}>20 y.o. Software Engineer @ Geolabs</div>
-          <div className={`description ${descriptionDone ? 'typing-done' : 'typing'}`} style={{ animationDelay: '7s' }}>Data Scientist @ National Science Foundation</div> */}
+          <divv className={`description ${descriptionDone ? 'typing-done' : 'typing'}`} style={{ animationDelay: '7s' }}>Data Scientist @ National Science Foundation</div> */}
           <div className='subtitle'><Type/></div>
         </div>
   
