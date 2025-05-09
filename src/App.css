@@ -43,7 +43,6 @@ html{
   color: rgb(240, 240, 240);
   cursor: pointer;
   text-decoration: none;
-  margin-left: 40px;
 }
 
 .icon-home-style:hover {
@@ -67,7 +66,7 @@ html{
   color: rgb(210, 210, 210);
   cursor: pointer;
   text-decoration: none;
-  margin-left: 30px;
+  margin-left: 2vw;
 }
 
 .icon-container-style:hover {
