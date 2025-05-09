@@ -1,11 +1,11 @@
 import React from 'react';
 import Skills from '../components/Skills';
-import '../styles/Skills.css';
+import '../styles/Experiences.css';
 const Experiences = () => {
   return (
     <div className="experiences-section">
+      <Skills />
       <div className="experience-item">
-        <Skills />
         <h3>Software Engineer I</h3>
         <p className="location">Geolabs, Inc. · Honolulu, HI · Sep 2024 – Present</p>
         <ul>

@@ -26,8 +26,9 @@ html{
   display: flex;
   flex-wrap: wrap;
   padding-top: 2vh;
-  z-index: 1000; /* make sure it’s above other content */
+  z-index: 1000;
 }
+
 
 
 .contact-container {

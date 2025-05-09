@@ -14,15 +14,14 @@
   }
 }
 
-
-
 .intro-container {
   width: 100vw;
-  margin-top: 12vh;
   display: flex;
   align-items: center;
   flex-direction: column;
+  padding-top: 80px;  /* match or slightly exceed the header height */
 }
+
 
 
 .taiki-img {
@@ -138,3 +137,16 @@
     right: 100%;
   }
 }
+
+
+
+@media (max-width: 768px) {
+  .top-container {
+    height: 80px;
+  }
+
+  .intro-container {
+    padding-top: 100px;
+  }
+}
+
