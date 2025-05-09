@@ -1,4 +1,5 @@
 .experiences-section {
+    font-weight: normal;
     color: white;
     width: 100vw;
   }
@@ -15,14 +16,16 @@
   
   .experience-item h3 {
     font-size: 20px;
+    height: 1vh;
   }
   
   .location {
-    font-size: 15x;
+    font-size: 14x;
     color: rgb(150, 150, 150);
   }
   
   .experience-item ul {
+    font-size: 15px;
     padding: 0;
     list-style: none;
   }
