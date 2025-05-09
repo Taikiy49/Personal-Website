@@ -1,32 +1,38 @@
-.box {
-  background-color: black;
-  border: 1px solid #ccc; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  padding: 30px;
-  margin-bottom: 40px; margin-left: 50px;
-  border-radius: 10px;
-  width: 200px;
+.software-engineer-section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+  color: white;
+}
+
+.software-engineer-section h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.software-engineer-section h2 {
+  font-size: 24px;
+  margin-top: 30px;
+}
+
+.software-engineer-section p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.software-engineer-section a {
+  color: #1e90ff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.software-engineer-section a:hover {
+  color: #63b3ed;
+}
+
+.software-engineer-section footer {
+  margin-top: 40px;
+  font-size: 14px;
+  color: rgb(150, 150, 150);
   text-align: center;
 }
-
-.box:hover {
-  transform: scale(1.01); 
-}
-
-.projects-container-floor{
-  min-height: 100vh;
-  color: #FFFFFF;
-}
-
-.projects-container {
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-
-}
-
-.projects-container-title{
-  margin-top: 100px; margin-bottom: 50px; margin-left: 50px;
-  font-size: 30px; font-weight: bold;
-}
-

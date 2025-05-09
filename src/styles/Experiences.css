@@ -1,124 +1,49 @@
-.experiences-container {
-    margin-top: 50vh;
-    height: 150vh;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-}
-
-.experiences-title {
-    color: #3ac0fa;
-    font-size: 50px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* GEO */
-.geolabs-container {
-    margin-top: 10vh;
-    width: 80vw;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.geolabs-title {
-    color: #b6e9ff;
-    font-size: 30px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.geolabs-description {
-    color: rgb(210, 210, 210);
-    margin-top: 10px;
-    font-size: 18px;
-    line-height: 1.5;
-}
-
-/* NSF */
-.nsf-container {
-    margin-top: 10vh;
-    width: 80vw;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.nsf-title {
-    color: #ffdb99;
-    font-size: 30px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.nsf-description {
-    color: rgb(210, 210, 210);
-    margin-top: 10px;
-    font-size: 18px;
-    line-height: 1.5;
-}
-
-/* Grader */
-.grader-container {
-    margin-top: 10vh;
-    width: 80vw;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.grader-title {
-    color: #9dd9d2;
-    font-size: 30px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.grader-description {
-    color: rgb(210, 210, 210);
-    margin-top: 10px;
-    font-size: 18px;
-    line-height: 1.5;
-}
-
-/* Learning Assistant */
-.la-container {
-    margin-top: 10vh;
-    width: 80vw;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.la-title {
-    color: #b8c7f9;
-    font-size: 30px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.la-description {
-    color: rgb(210, 210, 210);
-    margin-top: 10px;
-    font-size: 18px;
-    line-height: 1.5;
-}
-
-/* Tutoring */
-.tutoring-container {
-    margin-top: 10vh;
-    width: 80vw;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.tutoring-title {
-    color: #ffd6e0;
-    font-size: 30px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.tutoring-description {
-    color: rgb(210, 210, 210);
-    margin-top: 10px;
-    font-size: 18px;
-    line-height: 1.5;
-}
+.experiences-section {
+    color: white;
+  }
+  
+  .experiences-section h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .experiences-section h2 {
+    font-size: 28px;
+    margin-top: 40px;
+  }
+  
+  .experience-item {
+    margin-bottom: 30px;
+  }
+  
+  .experience-item h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  
+  .location {
+    font-size: 14px;
+    color: rgb(150, 150, 150);
+    margin-bottom: 10px;
+  }
+  
+  .experience-item ul {
+    list-style: disc inside;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .experience-item li {
+    margin-bottom: 5px;
+  }
+  
+  .experience-item a {
+    color: #1e90ff;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .experience-item a:hover {
+    color: #63b3ed;
+  }
+  

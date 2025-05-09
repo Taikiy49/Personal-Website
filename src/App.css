@@ -1,6 +1,3 @@
-/* App.css */
-
-/* Variables */
 html{
   color: white;
   font-weight: bold;
@@ -136,4 +133,12 @@ html{
   }
 }
 
-
+footer {
+  background-color: black;
+  font-size: 14px;
+  color: rgb(200, 200, 200);
+  text-align: center;
+  border-top: 1px solid rgb(50, 50, 50);
+  padding: 2vh 0;
+  width: 100vw;
+}

@@ -2,62 +2,61 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  padding: 40px;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-items: center;
+  gap: 30px;
   width: 100%;
-  height: auto;
+  max-width: 800px;
+}
+
+
+.about-card {
+  border: 1px solid rgb(50, 50, 50);
   padding: 20px;
+  border-radius: 10px;
+  background-color: rgb(10, 10, 10);
 }
 
-
-.black-table {
-  gap: 2vw;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 80vw;
-  background-color: black;
-  padding: 10px;
-}
-
-.black-table-box {
-  height: auto;
-  width: 30vw;
-  background-color: black;
-  border: 1px solid rgb(80, 80, 80);
+.about-card-header {
   display: flex;
   align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-  transition: transform 0.2s, background-color 0.2s;
-  padding: 20px;
-}
-
-
-.box-content {
-  text-align: center;
-  color: white;
-}
-
-.box-content h3 {
-  margin: 10px 0;
-  font-size: 16px;
-}
-
-.box-content p {
-  font-size: 14px;
   margin-bottom: 10px;
 }
 
-.box-content button {
-  border: 1px solid white;
-  background-color: black;
-  color: white;
-  padding: 8px 12px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.2s;
+.about-icon {
+  margin-right: 10px;
 }
 
-.box-content button:hover {
-  background-color: #1e90ff;
+.about-card h2 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.about-sublabel {
+  font-size: 14px;
+  color: rgb(150, 150, 150);
+  margin: 2px 0 0 0;
+}
+
+.about-card p {
+  font-size: 15px;
+  color: rgb(210, 210, 210);
+  margin: 10px 0;
+}
+
+.about-link {
+  color: #1e90ff;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 15px;
+  transition: color 0.2s;
+}
+
+.about-link:hover {
+  color: #63b3ed;
 }
