@@ -84,15 +84,6 @@ html{
   animation: moveAndFlip 30s linear infinite;
 }
 
-.counter-text {
-  position: absolute;
-  top: 80px;
-  left: 50px;
-  font-size: 10px;
-  font-weight: bold;
-  animation: moveCounter 30s linear infinite;
-  margin-left: 34px;
-}
 
 /* Keyframes for animations */
 @keyframes moveAndFlip {
@@ -139,6 +130,6 @@ footer {
   color: rgb(200, 200, 200);
   text-align: center;
   border-top: 1px solid rgb(50, 50, 50);
-  padding: 2vh 0;
+  padding: 1vh 0;
   width: 100vw;
 }
