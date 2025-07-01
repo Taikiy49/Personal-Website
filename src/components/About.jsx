@@ -1,45 +1,48 @@
 import '../styles/About.css';
 import React from 'react';
-import { FaLaptopCode, FaFlask, FaUserGraduate, FaRunning } from 'react-icons/fa';
+import { FaBriefcase, FaProjectDiagram, FaBullseye, FaUser } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
 const About = () => {
+  const navigate = useNavigate();
+
   const items = [
     {
-      label: 'Software Engineer',
-      sublabel: 'Building better software',
-      icon: <FaLaptopCode size={40} />,
-      description: 'Exploring software, algorithms, and development to boost engineering productivity.',
-      linkText: 'Explore my work →',
-      link: 'https://geolabs.com',
+      label: 'Background',
+      sublabel: 'Where it all began',
+      icon: <FaUser size={40} />,
+      description: 'Born and raised in Honolulu, I grew up curious about how things work. I’ve always loved solving problems and exploring new technologies, which led me to pursue computer science at UC Irvine.',
+      linkText: 'Read more →',
+      route: '/background',
     },
     {
-      label: 'Data Scientist',
-      sublabel: 'Discovering insights',
-      icon: <FaFlask size={40} />,
-      description: "Analyzing data and applying machine learning techniques to reveal meaningful patterns and insights.",
-      linkText: 'See the insights →',
-      link: 'https://nsf.gov',
+      label: 'Experiences',
+      sublabel: 'Learning through doing',
+      icon: <FaBriefcase size={40} />,
+      description: 'Gained hands-on experience at organizations like Geolabs and the National Science Foundation, working on AI systems, data pipelines, and meaningful software tools.',
+      linkText: 'See my experience →',
+      route: '/experiences',
     },
     {
-      label: 'Tutor / Mentor',
-      sublabel: 'Helping students grow',
-      icon: <FaUserGraduate size={40} />,
-      description: 'Guiding students through computer science and mathematics, empowering them to learn and thrive.',
-      linkText: 'Meet the mentor →',
-      link: 'https://uci.edu',
+      label: 'Projects',
+      sublabel: 'Building creative tools',
+      icon: <FaProjectDiagram size={40} />,
+      description: 'Developed platforms like Cura AI, ScheduleEase, and an AI-powered report search system to solve real-world problems using full-stack and AI technologies.',
+      linkText: 'Browse projects →',
+      route: '/projects',
     },
     {
-      label: 'Golfer & Pickleballer',
-      sublabel: 'Active & strategic',
-      icon: <FaRunning size={40} />,
-      description: 'Combining athletic strategy and energy through golf and pickleball, both recreationally and competitively.',
-      linkText: 'Join the game →',
-      link: 'https://honolulututoring.com',
+      label: 'Goals',
+      sublabel: 'Aiming higher',
+      icon: <FaBullseye size={40} />,
+      description: 'Dedicated to creating accessible tech, launching open-source tools for learning, and contributing to AI research that improves lives.',
+      linkText: 'View goals →',
+      route: '/goals',
     },
   ];
 
-  const handleClick = (link) => {
-    window.open(link, '_blank');
+  const handleClick = (route) => {
+    navigate(route);
   };
 
   return (
@@ -55,7 +58,7 @@ const About = () => {
               </div>
             </div>
             <p>{item.description}</p>
-            <span className="about-link" onClick={() => handleClick(item.link)}>
+            <span className="about-link" onClick={() => handleClick(item.route)}>
               {item.linkText}
             </span>
           </div>

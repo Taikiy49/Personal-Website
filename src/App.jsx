@@ -6,17 +6,18 @@ import About from './components/About';
 import Experiences from './components/Experiences';
 import Projects from './components/Projects';
 import Goals from './components/Goals';
-import ScrollToTop from './components/ScrollToTop'; // Import it here
+import ScrollToTop from './components/ScrollToTop';
 
 const App = () => {
   return (
     <Router>
-      <ScrollToTop /> {/* Add this just inside Router */}
+      <ScrollToTop />
       <div className="app-container">
         <div className="top-container">
           <div className="contact-container">Taiki Owen Yamashita / 山下大輝</div>
           <div className="icon-container">
             <Link to="/" className="icon-home-style">Home</Link>
+            <Link to="/background" className="icon-container-style">Background</Link>
             <Link to="/experiences" className="icon-container-style">Experiences</Link>
             <Link to="/projects" className="icon-container-style">Projects</Link>
             <Link to="/goals" className="icon-container-style">Goals</Link>
@@ -25,6 +26,7 @@ const App = () => {
 
         <Routes>
           <Route path="/" element={<><Cover /><About /></>} />
+          <Route path="/background" element={<><Cover /><About /></>} />
           <Route path="/experiences" element={<Experiences />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/goals" element={<Goals />} />
