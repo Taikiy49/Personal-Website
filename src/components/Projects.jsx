@@ -42,7 +42,7 @@ const SoftwareEngineer = () => {
         A synergistic medical assistance platform integrating generative AI to improve patient support.
         <br /><a href="https://github.com/yourusername/cura-ai" target="_blank" rel="noopener noreferrer">GitHub</a>
       </p>
-
+      
       <p><strong>ScheduleEase</strong><br />
       React, DynamoDB, Machine Learning</p>
       <p>

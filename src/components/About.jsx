@@ -13,7 +13,7 @@ const About = () => {
       icon: <FaUser size={40} />,
       description: 'Born and raised in Honolulu, I grew up curious about how things work. I’ve always loved solving problems and exploring new technologies, which led me to pursue computer science at UC Irvine.',
       linkText: 'Read more →',
-      route: '/background',
+      route: '/background', // ✅ Correct internal route
     },
     {
       label: 'Experiences',

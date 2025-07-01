@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import '../styles/Cover.css';
 import Type from './Type';
+import { FaLinkedin, FaGithub, FaFileAlt } from 'react-icons/fa';
 
 const Cover = () => {
   const [headerHeight, setHeaderHeight] = useState(0);
@@ -15,7 +16,6 @@ const Cover = () => {
 
     updateHeaderHeight();
     window.addEventListener('resize', updateHeaderHeight);
-
     return () => window.removeEventListener('resize', updateHeaderHeight);
   }, []);
 
@@ -40,6 +40,17 @@ const Cover = () => {
         <div className='typing-container'>
           <div className='title'>Taiki Yamashita</div>
           <div className='subtitle'><Type /></div>
+        </div>
+        <div className="icon-links">
+          <a href="https://linkedin.com/in/taikiyamashita" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <FaLinkedin size={28} />
+          </a>
+          <a href="https://github.com/taikiy49" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <FaGithub size={28} />
+          </a>
+          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" aria-label="Resume">
+            <FaFileAlt size={28} />
+          </a>
         </div>
       </div>
     </div>

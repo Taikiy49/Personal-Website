@@ -138,3 +138,20 @@
   }
 }
 
+.icon-links {
+  display: flex;
+  gap: 24px;
+  margin-top: 15px;
+  justify-content: center;
+}
+
+.icon-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.icon-links a:hover {
+  color: #3ac0fa;
+  transform: scale(1.2);
+}

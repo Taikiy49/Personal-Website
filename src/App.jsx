@@ -3,6 +3,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Cover from './components/Cover';
 import About from './components/About';
+import Background from './components/Background'; // ✅ NEW IMPORT
 import Experiences from './components/Experiences';
 import Projects from './components/Projects';
 import Goals from './components/Goals';
@@ -26,11 +27,12 @@ const App = () => {
 
         <Routes>
           <Route path="/" element={<><Cover /><About /></>} />
-          <Route path="/background" element={<><Cover /><About /></>} />
+          <Route path="/background" element={<Background />} /> {/* ✅ FIXED ROUTE */}
           <Route path="/experiences" element={<Experiences />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/goals" element={<Goals />} />
         </Routes>
+
         <footer>© 2025 Taiki Yamashita. All rights reserved.</footer>
       </div>
     </Router>
