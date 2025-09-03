@@ -19,7 +19,7 @@ const About = () => {
       label: 'Experiences',
       sublabel: 'Professional journey',
       icon: <FaBriefcase size={40} />,
-      description: 'From software engineering at Geolabs to data science research at NSF, I've built AI systems, optimized workflows, and mentored students across diverse technical roles.',
+      description: "From software engineering at Geolabs to data science research at NSF, I've built AI systems, optimized workflows, and mentored students across diverse technical roles.",
       linkText: 'See my experience →',
       route: '/experiences',
     },
