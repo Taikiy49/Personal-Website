@@ -12,6 +12,15 @@ import TechStack from './components/TechStack';
 import Achievements from './components/Achievements';
 import Blog from './components/Blog';
 import Terminal from './components/Terminal';
+import Portfolio from './components/Portfolio';
+import Testimonials from './components/Testimonials';
+import CodeSnippets from './components/CodeSnippets';
+import PhotoGallery from './components/PhotoGallery';
+import NowPage from './components/NowPage';
+import FunFacts from './components/FunFacts';
+import ThemeToggle from './components/ThemeToggle';
+import SearchBar from './components/SearchBar';
+import Newsletter from './components/Newsletter';
 import ScrollToTop from './components/ScrollToTop';
 import './styles/App.css';
 
@@ -21,6 +30,8 @@ const App = () => {
       <ScrollToTop />
       <div className="app">
         <CodeMatrix />
+        <ThemeToggle />
+        <SearchBar />
         <Navbar />
         
         <Routes>
@@ -28,13 +39,20 @@ const App = () => {
             <>
               <Hero />
               <About />
+              <NowPage />
               <TechStack />
               <Skills />
               <Experience />
+              <Portfolio />
               <Projects />
+              <CodeSnippets />
               <Achievements />
+              <Testimonials />
               <Blog />
+              <PhotoGallery />
+              <FunFacts />
               <Terminal />
+              <Newsletter />
               <Contact />
             </>
           } />

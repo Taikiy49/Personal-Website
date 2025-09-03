@@ -1,0 +1,116 @@
+.theme-toggle {
+  position: fixed;
+  top: 70px;
+  right: 20px;
+  z-index: 1001;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.toggle-track {
+  width: 60px;
+  height: 30px;
+  background: rgba(26, 26, 46, 0.8);
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  border-radius: 15px;
+  position: relative;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.toggle-track:hover {
+  border-color: rgba(0, 212, 255, 0.6);
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.2);
+}
+
+.toggle-thumb {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  transition: all 0.3s ease;
+  color: white;
+}
+
+.toggle-thumb.dark {
+  left: 2px;
+  background: linear-gradient(45deg, #1a1a2e, #0a0a0f);
+  border: 1px solid rgba(0, 212, 255, 0.3);
+}
+
+.toggle-thumb.light {
+  left: 32px;
+  background: linear-gradient(45deg, #ffd700, #ffaa00);
+  border: 1px solid rgba(255, 170, 0, 0.3);
+}
+
+/* Light theme styles */
+[data-theme="light"] {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --text-primary: #2d3748;
+  --text-secondary: #4a5568;
+  --accent-primary: #0066cc;
+  --accent-secondary: #004499;
+  --border-color: rgba(0, 102, 204, 0.2);
+}
+
+[data-theme="light"] body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+[data-theme="light"] .app {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 25%, #e2e8f0 50%, #f1f5f9 75%, #ffffff 100%);
+}
+
+[data-theme="light"] .cyber-card {
+  background: rgba(248, 249, 250, 0.8);
+  border-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+[data-theme="light"] .section-title {
+  background: linear-gradient(45deg, var(--accent-primary), var(--text-primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+[data-theme="light"] .section-subtitle {
+  color: var(--text-secondary);
+}
+
+[data-theme="light"] .toggle-track {
+  background: rgba(248, 249, 250, 0.8);
+  border-color: var(--border-color);
+}
+
+@media screen and (max-width: 768px) {
+  .theme-toggle {
+    top: 60px;
+    right: 15px;
+  }
+  
+  .toggle-track {
+    width: 50px;
+    height: 25px;
+  }
+  
+  .toggle-thumb {
+    width: 21px;
+    height: 21px;
+    font-size: 10px;
+  }
+  
+  .toggle-thumb.light {
+    left: 27px;
+  }
+}
