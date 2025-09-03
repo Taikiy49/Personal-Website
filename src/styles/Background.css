@@ -21,4 +21,20 @@
 .background-content p {
   font-size: 16px;
   color: rgb(210, 210, 210);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.passion-section {
+  margin-bottom: 40px;
+  padding: 25px;
+  border: 1px solid rgb(50, 50, 50);
+  border-radius: 10px;
+  background-color: rgb(15, 15, 15);
+}
+
+.passion-section h2 {
+  font-size: 24px;
+  color: #3ac0fa;
+  margin-bottom: 15px;
 }

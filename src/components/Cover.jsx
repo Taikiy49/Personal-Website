@@ -38,7 +38,7 @@ const Cover = () => {
       <div className="intro-container" style={{ paddingTop: headerHeight }}>
         <img src='./taiki-img.png' className='taiki-img' alt='Taiki Yamashita profile' />
         <div className='typing-container'>
-          <div className='title'>Taiki Yamashita</div>
+          <div className='title'>Taiki "Ado Fan" Yamashita</div>
           <div className='subtitle'><Type /></div>
         </div>
         <div className="icon-links">

@@ -18,19 +18,19 @@ const App = () => {
           <div className="contact-container">Taiki Owen Yamashita / 山下大輝</div>
           <div className="icon-container">
             <Link to="/" className="icon-home-style">Home</Link>
-            <Link to="/background" className="icon-container-style">Background</Link>
+            <Link to="/passions" className="icon-container-style">Passions</Link>
             <Link to="/experiences" className="icon-container-style">Experiences</Link>
-            <Link to="/projects" className="icon-container-style">Projects</Link>
-            <Link to="/goals" className="icon-container-style">Goals</Link>
+            <Link to="/sports" className="icon-container-style">Sports</Link>
+            <Link to="/music" className="icon-container-style">Music</Link>
           </div>
         </div>
 
         <Routes>
           <Route path="/" element={<><Cover /><About /></>} />
-          <Route path="/background" element={<Background />} /> {/* ✅ FIXED ROUTE */}
+          <Route path="/passions" element={<Background />} />
           <Route path="/experiences" element={<Experiences />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/goals" element={<Goals />} />
+          <Route path="/sports" element={<Projects />} />
+          <Route path="/music" element={<Goals />} />
         </Routes>
 
         <footer>© 2025 Taiki Yamashita. All rights reserved.</footer>

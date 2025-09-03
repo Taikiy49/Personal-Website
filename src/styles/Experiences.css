@@ -66,11 +66,21 @@
 .experience-item h3 {
   font-size: 20px;
   height: 1vh;
+  color: #3ac0fa;
 }
 
 .location {
   font-size: 14px;
   color: rgb(150, 150, 150);
+  margin-bottom: 10px;
+}
+
+.role-description {
+  font-size: 15px;
+  color: rgb(180, 180, 180);
+  font-style: italic;
+  margin-bottom: 15px;
+  line-height: 1.5;
 }
 
 .experience-item ul {
@@ -81,6 +91,11 @@
 
 .experience-item li {
   margin-bottom: 5px;
+  line-height: 1.5;
+}
+
+.experience-item li strong {
+  color: white;
 }
 
 .experience-item a {

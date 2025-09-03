@@ -1,63 +1,64 @@
 import React from 'react';
 import '../styles/Projects.css';
 
-const SoftwareEngineer = () => {
+const Sports = () => {
   return (
-    <div className="software-engineer-section">
-      <h1>Software Engineer</h1>
-      <p>My journey in software engineering, including education, skills, and projects.</p>
-
-      <h2>Education</h2>
-      <p><strong>B.S. in Computer Science</strong><br />
-      University of California, Irvine, 2022 – 2026</p>
-      <p>
-        Studying algorithms, data structures, software engineering, and artificial intelligence.
-        Currently maintaining a 3.7+ GPA with a focus on machine learning and software systems.
-      </p>
-
-      <h2>Work Experience</h2>
-      <p><strong>Software Engineer Intern</strong><br />
-      Geolabs, Inc., June 2024 – September 2024</p>
-      <p>
-        Developed AI-powered tools to accelerate engineering workflows, optimized backend systems using Python and Flask, and improved data searchability across 8,000+ technical reports.
-      </p>
-
-      <h2>Skills</h2>
-      <p><strong>Programming Languages</strong><br />
-      Python, C/C++, JavaScript, TypeScript, Java, SQL</p>
-
-      <p><strong>Web Development</strong><br />
-      React, Flask, Node.js, HTML/CSS, Tailwind CSS</p>
-
-      <p><strong>Machine Learning & AI</strong><br />
-      TensorFlow, Scikit-Learn, PyTorch, NumPy, Pandas</p>
-
-      <p><strong>Tools & Technologies</strong><br />
-      Git, Docker, AWS, Linux, MongoDB, Notion</p>
-
-      <h2>Projects</h2>
-      <p><strong>Cura AI</strong><br />
-      Python, Flask, Gemini API</p>
-      <p>
-        A synergistic medical assistance platform integrating generative AI to improve patient support.
-        <br /><a href="https://github.com/yourusername/cura-ai" target="_blank" rel="noopener noreferrer">GitHub</a>
-      </p>
+    <div className="sports-section">
+      <h1>Sports & Recreation</h1>
       
-      <p><strong>ScheduleEase</strong><br />
-      React, DynamoDB, Machine Learning</p>
-      <p>
-        An intelligent schedule maker that optimizes time management for students and professionals.
-        <br /><a href="https://github.com/yourusername/scheduleease" target="_blank" rel="noopener noreferrer">GitHub</a>
-      </p>
+      <div className="sport-section">
+        <h2>Golf ⛳</h2>
+        <p>
+          Golf has become one of my greatest passions. There's something incredibly satisfying about the 
+          precision and mental focus required for each shot. I love how golf challenges both your physical 
+          technique and mental strategy - every round is a new puzzle to solve.
+        </p>
+        <p>
+          Living in Hawaii, I'm fortunate to have access to some of the most beautiful courses in the world. 
+          Whether it's an early morning round watching the sunrise over the Pacific or a weekend game with 
+          friends, golf provides the perfect balance to my tech-focused work life.
+        </p>
+        <p>
+          <strong>Current Handicap:</strong> Working on breaking 90 consistently<br />
+          <strong>Favorite Course:</strong> Ala Wai Golf Course<br />
+          <strong>Best Round:</strong> 87 at Kahuku Golf Course
+        </p>
+      </div>
 
-      <p><strong>Personal Website</strong><br />
-      React, Tailwind CSS, AWS</p>
-      <p>
-        A responsive portfolio website showcasing projects, skills, and personal achievements.
-        <br /><a href="https://yourwebsite.com" target="_blank" rel="noopener noreferrer">Live Demo</a>
-      </p>
+      <div className="sport-section">
+        <h2>Pickleball 🏓</h2>
+        <p>
+          Pickleball has quickly become my favorite racquet sport! I love how it combines elements of 
+          tennis, badminton, and ping pong into something uniquely fun and accessible. The fast-paced 
+          rallies and strategic positioning keep me engaged and constantly improving.
+        </p>
+        <p>
+          What I enjoy most about pickleball is the community aspect - it's easy to jump into games 
+          with people of all skill levels, and everyone is usually welcoming and encouraging. The sport 
+          has taught me patience, quick decision-making, and the importance of positioning over power.
+        </p>
+        <p>
+          <strong>Playing Level:</strong> Intermediate (3.5-4.0)<br />
+          <strong>Favorite Shot:</strong> Third shot drop<br />
+          <strong>Home Court:</strong> Local community center courts
+        </p>
+      </div>
+
+      <div className="sport-section">
+        <h2>Why Sports Matter to Me</h2>
+        <p>
+          Both golf and pickleball provide essential balance to my life as a software engineer. 
+          They get me outdoors, help me stay physically active, and offer a mental break from screens 
+          and code. The strategic thinking required in both sports actually complements my programming 
+          work - analyzing situations, planning moves ahead, and adapting to changing conditions.
+        </p>
+        <p>
+          These sports have also taught me valuable lessons about patience, persistence, and continuous 
+          improvement that I apply to my professional development. Just like debugging code or optimizing 
+          algorithms, getting better at golf and pickleball requires consistent practice and learning from mistakes.
+        </p>
+      </div>
     </div>
   );
 };
 
-export default SoftwareEngineer;

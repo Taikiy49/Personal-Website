@@ -8,36 +8,36 @@ const About = () => {
 
   const items = [
     {
-      label: 'Background',
-      sublabel: 'Where it all began',
+      label: 'Passions',
+      sublabel: 'What drives me',
       icon: <FaUser size={40} />,
-      description: 'Born and raised in Honolulu, I grew up curious about how things work. I’ve always loved solving problems and exploring new technologies, which led me to pursue computer science at UC Irvine.',
+      description: 'Beyond coding, I'm passionate about Japanese culture, music, and staying active. These interests shape who I am and inspire my work.',
       linkText: 'Read more →',
-      route: '/background', // ✅ Correct internal route
+      route: '/passions',
     },
     {
       label: 'Experiences',
-      sublabel: 'Learning through doing',
+      sublabel: 'Professional journey',
       icon: <FaBriefcase size={40} />,
-      description: 'Gained hands-on experience at organizations like Geolabs and the National Science Foundation, working on AI systems, data pipelines, and meaningful software tools.',
+      description: 'From software engineering at Geolabs to data science research at NSF, I've built AI systems, optimized workflows, and mentored students across diverse technical roles.',
       linkText: 'See my experience →',
       route: '/experiences',
     },
     {
-      label: 'Projects',
-      sublabel: 'Building creative tools',
+      label: 'Sports',
+      sublabel: 'Golf & Pickleball',
       icon: <FaProjectDiagram size={40} />,
-      description: 'Developed platforms like Cura AI, ScheduleEase, and an AI-powered report search system to solve real-world problems using full-stack and AI technologies.',
-      linkText: 'Browse projects →',
-      route: '/projects',
+      description: 'Golf and pickleball are my favorite ways to unwind and stay competitive. I love the strategy, precision, and mental focus these sports require.',
+      linkText: 'Learn about my sports →',
+      route: '/sports',
     },
     {
-      label: 'Goals',
-      sublabel: 'Aiming higher',
+      label: 'Music',
+      sublabel: 'Ado & J-Pop',
       icon: <FaBullseye size={40} />,
-      description: 'Dedicated to creating accessible tech, launching open-source tools for learning, and contributing to AI research that improves lives.',
-      linkText: 'View goals →',
-      route: '/goals',
+      description: 'Huge fan of Ado, the incredible Japanese singer. Her powerful vocals and unique style have been a constant source of inspiration and energy in my daily life.',
+      linkText: 'Explore my music taste →',
+      route: '/music',
     },
   ];
 
