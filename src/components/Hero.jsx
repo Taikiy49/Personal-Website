@@ -11,9 +11,9 @@ const Hero = () => {
   const words = [
     'Software Engineer',
     'AI Enthusiast', 
-    'Ado Music Fan',
+    'Fitness Enthusiast',
     'Golf Player',
-    'Pickleball Lover',
+    'Travel Lover',
     'Problem Solver'
   ];
 
@@ -54,8 +54,8 @@ const Hero = () => {
               <span className="cursor">|</span>
             </div>
             <p className="hero-description">
-              Passionate software engineer building AI-powered solutions, obsessed with Ado's music, 
-              and always ready for a round of golf or pickleball. Currently transforming the 
+              Passionate software engineer building AI-powered solutions. Japanese-born with a love for 
+              fitness, golf, travel, and exploring my cultural heritage. Currently transforming the 
               geotechnical engineering industry with cutting-edge technology.
             </p>
             <div className="hero-buttons">

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaGolfBall, FaTableTennis, FaMusic, FaHeart, FaTrophy, FaChartLine, FaPlay } from 'react-icons/fa';
+import { FaGolfBall, FaTableTennis, FaMusic, FaHeart, FaTrophy, FaChartLine, FaPlay, FaDumbbell, FaPlane, FaMapMarkedAlt } from 'react-icons/fa';
 import '../styles/Projects.css';
 
 const Projects = () => {
@@ -8,40 +8,30 @@ const Projects = () => {
   const adoContent = {
     title: "Ado - My Musical Inspiration",
     subtitle: "The voice that powers my creativity",
-    description: "Ado is absolutely incredible! Her voice has this raw power and emotional depth that just hits different. Every song is a masterpiece of vocal technique and artistic expression.",
+    description: "Ado's music is my coding fuel. Her powerful vocals and emotional range create the perfect atmosphere for deep focus during programming sessions.",
     favoriteSongs: [
       { 
         name: "Usseewa", 
-        reason: "The song that got me hooked! The rebellious energy and vocal power are unmatched.",
+        reason: "Perfect energy for tackling complex algorithms.",
         year: "2020"
       },
       { 
         name: "Show", 
-        reason: "Demonstrates her incredible range and emotional control. Gives me chills every time.",
+        reason: "Great for maintaining focus during long coding sessions.",
         year: "2022"
       },
       { 
         name: "Gira Gira", 
-        reason: "The intensity and vocal gymnastics are absolutely mind-blowing.",
+        reason: "High-energy track that keeps me motivated.",
         year: "2023"
-      },
-      { 
-        name: "Odo", 
-        reason: "Beautiful melody with technical perfection. Perfect coding background music.",
-        year: "2022"
-      },
-      { 
-        name: "Readymade", 
-        reason: "Love the rock influence and how she makes it uniquely hers.",
-        year: "2021"
       }
     ],
-    impact: "Ado's music is my coding fuel. Her energy keeps me in flow state during long programming sessions, and her artistic perfectionism inspires me to write cleaner, more elegant code.",
+    impact: "Her music keeps me in flow state during development work and inspires attention to detail in my code.",
     stats: {
-      songsPlayed: "2,847",
-      hoursListened: "156",
+      songsPlayed: "1,200+",
+      hoursListened: "80+",
       favoriteAlbum: "Kyogen",
-      concertsWatched: "12 (online)"
+      concertsWatched: "5 (online)"
     }
   };
 
@@ -88,6 +78,48 @@ const Projects = () => {
     }
   };
 
+  const gymData = {
+    title: "Fitness & Strength Training",
+    subtitle: "Building both code and muscle",
+    description: "The gym is my sanctuary for both physical and mental strength. Regular workouts keep me sharp, focused, and ready to tackle any coding challenge.",
+    stats: {
+      frequency: "5-6 times per week",
+      favoriteExercise: "Deadlifts & Pull-ups",
+      currentGoal: "Increasing overall strength",
+      workoutStyle: "Compound movements focus",
+      motivation: "Consistency over intensity"
+    },
+    benefits: [
+      "Improved focus and mental clarity for coding",
+      "Better posture for long programming sessions",
+      "Stress relief after debugging complex issues",
+      "Discipline that translates to consistent coding habits",
+      "Energy boost for tackling challenging projects"
+    ],
+    philosophy: "Just like writing clean code, fitness is about consistency, progressive improvement, and building strong foundations."
+  };
+
+  const travelData = {
+    title: "Travel & Cultural Exploration",
+    subtitle: "Japanese heritage meets global curiosity",
+    description: "Born to Japanese parents, I have a deep connection to Japan and love exploring both my cultural roots and new destinations around the world.",
+    stats: {
+      japanVisits: "8+ trips to Japan",
+      favoriteCity: "Tokyo & Kyoto",
+      culturalConnection: "Fluent in Japanese",
+      travelStyle: "Cultural immersion",
+      nextDestination: "Exploring more of Asia"
+    },
+    experiences: [
+      "Exploring Tokyo's tech districts and innovation hubs",
+      "Visiting traditional temples and modern architecture",
+      "Experiencing Japanese work culture and technology",
+      "Connecting with family and cultural heritage",
+      "Discovering regional cuisines and local traditions"
+    ],
+    philosophy: "Travel broadens perspective just like learning new programming languages - each experience adds new tools to solve problems."
+  };
+
   return (
     <section id="projects" className="projects-section">
       <div className="container">
@@ -117,6 +149,20 @@ const Projects = () => {
           >
             <FaTableTennis />
             <span>Pickleball</span>
+          </button>
+          <button 
+            className={`tab-btn ${activeTab === 'gym' ? 'active' : ''}`}
+            onClick={() => setActiveTab('gym')}
+          >
+            <FaDumbbell />
+            <span>Fitness</span>
+          </button>
+          <button 
+            className={`tab-btn ${activeTab === 'travel' ? 'active' : ''}`}
+            onClick={() => setActiveTab('travel')}
+          >
+            <FaPlane />
+            <span>Travel</span>
           </button>
         </div>
 
@@ -206,6 +252,88 @@ const Projects = () => {
               <div className="sport-philosophy">
                 <h4>My Philosophy</h4>
                 <p>{sportsData[activeTab].philosophy}</p>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {activeTab === 'gym' && (
+          <div className="passion-content">
+            <div className="sport-showcase cyber-card">
+              <div className="sport-header">
+                <div className="sport-icon">
+                  <FaDumbbell />
+                </div>
+                <div>
+                  <h3 className="sport-title">{gymData.title}</h3>
+                  <p className="sport-subtitle">{gymData.subtitle}</p>
+                </div>
+              </div>
+              
+              <p className="sport-description">{gymData.description}</p>
+              
+              <div className="sport-stats-grid">
+                {Object.entries(gymData.stats).map(([key, value], index) => (
+                  <div key={index} className="sport-stat-card">
+                    <h5>{key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}</h5>
+                    <p>{value}</p>
+                  </div>
+                ))}
+              </div>
+              
+              <div className="sport-achievements">
+                <h4><FaTrophy /> Benefits for Programming</h4>
+                <ul>
+                  {gymData.benefits.map((benefit, i) => (
+                    <li key={i}>{benefit}</li>
+                  ))}
+                </ul>
+              </div>
+              
+              <div className="sport-philosophy">
+                <h4>My Philosophy</h4>
+                <p>{gymData.philosophy}</p>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {activeTab === 'travel' && (
+          <div className="passion-content">
+            <div className="sport-showcase cyber-card">
+              <div className="sport-header">
+                <div className="sport-icon">
+                  <FaMapMarkedAlt />
+                </div>
+                <div>
+                  <h3 className="sport-title">{travelData.title}</h3>
+                  <p className="sport-subtitle">{travelData.subtitle}</p>
+                </div>
+              </div>
+              
+              <p className="sport-description">{travelData.description}</p>
+              
+              <div className="sport-stats-grid">
+                {Object.entries(travelData.stats).map(([key, value], index) => (
+                  <div key={index} className="sport-stat-card">
+                    <h5>{key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}</h5>
+                    <p>{value}</p>
+                  </div>
+                ))}
+              </div>
+              
+              <div className="sport-achievements">
+                <h4><FaPlane /> Travel Experiences</h4>
+                <ul>
+                  {travelData.experiences.map((experience, i) => (
+                    <li key={i}>{experience}</li>
+                  ))}
+                </ul>
+              </div>
+              
+              <div className="sport-philosophy">
+                <h4>My Philosophy</h4>
+                <p>{travelData.philosophy}</p>
               </div>
             </div>
           </div>
