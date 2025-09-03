@@ -20,7 +20,7 @@ const Navbar = () => {
     if (element) {
       const headerOffset = 60;
       const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+      const offsetPosition = elementPosition + window.pageYOffset - 40;
       
       window.scrollTo({
         top: offsetPosition,
