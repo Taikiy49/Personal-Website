@@ -19,7 +19,6 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission here
     console.log('Form submitted:', formData);
     alert('Thanks for reaching out! I\'ll get back to you soon.');
     setFormData({ name: '', email: '', subject: '', message: '' });
@@ -30,12 +29,12 @@ const Contact = () => {
       <div className="container">
         <div className="section-header">
           <h2 className="section-title">Let's Connect</h2>
-          <p className="section-subtitle">Ready to collaborate or just want to chat about Ado, golf, or tech?</p>
+          <p className="section-subtitle">Ready to build something amazing together?</p>
         </div>
 
         <div className="contact-content">
           <div className="contact-info">
-            <div className="contact-card glass-card">
+            <div className="contact-card cyber-card">
               <h3>Get In Touch</h3>
               <p>
                 Whether you want to discuss exciting project opportunities, share your favorite Ado songs, 
@@ -49,7 +48,7 @@ const Contact = () => {
                   </div>
                   <div className="method-info">
                     <h4>Email</h4>
-                    <p>taiki.yamashita@example.com</p>
+                    <p>taikiy49@gmail.com</p>
                   </div>
                 </div>
                 
@@ -59,7 +58,7 @@ const Contact = () => {
                   </div>
                   <div className="method-info">
                     <h4>Phone</h4>
-                    <p>+1 (808) 555-0123</p>
+                    <p>(808) 450-5767</p>
                   </div>
                 </div>
                 
@@ -69,13 +68,13 @@ const Contact = () => {
                   </div>
                   <div className="method-info">
                     <h4>Location</h4>
-                    <p>Honolulu, Hawaii</p>
+                    <p>Irvine, CA | Honolulu, HI</p>
                   </div>
                 </div>
               </div>
               
               <div className="social-links">
-                <a href="https://github.com/taikiy49" target="_blank" rel="noopener noreferrer" className="social-link">
+                <a href="https://github.com/Taikiy49" target="_blank" rel="noopener noreferrer" className="social-link">
                   <FaGithub />
                 </a>
                 <a href="https://linkedin.com/in/taikiyamashita" target="_blank" rel="noopener noreferrer" className="social-link">
@@ -86,7 +85,7 @@ const Contact = () => {
           </div>
 
           <div className="contact-form-container">
-            <form className="contact-form glass-card" onSubmit={handleSubmit}>
+            <form className="contact-form cyber-card" onSubmit={handleSubmit}>
               <h3>Send a Message</h3>
               
               <div className="form-group">
@@ -133,7 +132,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   className="form-textarea"
-                  rows="5"
+                  rows="4"
                 ></textarea>
               </div>
               

@@ -1,10 +1,10 @@
 .holographic-card {
   position: relative;
-  background: rgba(26, 26, 46, 0.3);
-  backdrop-filter: blur(15px);
+  background: rgba(26, 26, 46, 0.6);
+  backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 15px;
-  padding: 20px;
+  border-radius: 8px;
+  padding: 15px;
   transition: all 0.3s ease;
   transform-style: preserve-3d;
   overflow: hidden;
@@ -29,7 +29,7 @@
   animation: holographic-shift 4s ease-in-out infinite;
   opacity: 0;
   transition: opacity 0.3s ease;
-  border-radius: 15px;
+  border-radius: 8px;
 }
 
 .holographic-card:hover::before {
@@ -53,7 +53,7 @@
   opacity: 0;
   transition: opacity 0.3s ease;
   pointer-events: none;
-  border-radius: 15px;
+  border-radius: 8px;
 }
 
 .holographic-card:hover .holographic-overlay {

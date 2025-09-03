@@ -4,10 +4,14 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
 import Experience from './components/Experience';
-import Projects from './components/Projects';
 import Skills from './components/Skills';
+import Projects from './components/Projects';
 import Contact from './components/Contact';
-import FloatingElements from './components/FloatingElements';
+import CodeMatrix from './components/CodeMatrix';
+import TechStack from './components/TechStack';
+import Achievements from './components/Achievements';
+import Blog from './components/Blog';
+import Terminal from './components/Terminal';
 import ScrollToTop from './components/ScrollToTop';
 import './styles/App.css';
 
@@ -16,7 +20,7 @@ const App = () => {
     <Router>
       <ScrollToTop />
       <div className="app">
-        <FloatingElements />
+        <CodeMatrix />
         <Navbar />
         
         <Routes>
@@ -24,16 +28,16 @@ const App = () => {
             <>
               <Hero />
               <About />
+              <TechStack />
               <Skills />
               <Experience />
               <Projects />
+              <Achievements />
+              <Blog />
+              <Terminal />
               <Contact />
             </>
           } />
-          <Route path="/about" element={<About />} />
-          <Route path="/experience" element={<Experience />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>
     </Router>

@@ -34,6 +34,24 @@
     transform: translate(0);
   }
   20% {
+    transform: translate(-1px, 1px);
+  }
+  40% {
+    transform: translate(-1px, -1px);
+  }
+  60% {
+    transform: translate(1px, 1px);
+  }
+  80% {
+    transform: translate(1px, -1px);
+  }
+}
+
+@keyframes glitch-1 {
+  0%, 100% {
+    transform: translate(0);
+  }
+  20% {
     transform: translate(-2px, 2px);
   }
   40% {
@@ -47,38 +65,20 @@
   }
 }
 
-@keyframes glitch-1 {
-  0%, 100% {
-    transform: translate(0);
-  }
-  20% {
-    transform: translate(-3px, 3px);
-  }
-  40% {
-    transform: translate(-3px, -3px);
-  }
-  60% {
-    transform: translate(3px, 3px);
-  }
-  80% {
-    transform: translate(3px, -3px);
-  }
-}
-
 @keyframes glitch-2 {
   0%, 100% {
     transform: translate(0);
   }
   20% {
-    transform: translate(3px, -3px);
+    transform: translate(2px, -2px);
   }
   40% {
-    transform: translate(3px, 3px);
+    transform: translate(2px, 2px);
   }
   60% {
-    transform: translate(-3px, -3px);
+    transform: translate(-2px, -2px);
   }
   80% {
-    transform: translate(-3px, 3px);
+    transform: translate(-2px, 2px);
   }
 }

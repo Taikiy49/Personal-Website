@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { FaGithub, FaLinkedin, FaFileAlt, FaMusic, FaGolfBall } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaFileAlt, FaMusic, FaGolfBall, FaCode, FaRocket } from 'react-icons/fa';
 import GlitchText from './GlitchText';
 import NeonButton from './NeonButton';
 import '../styles/Hero.css';
@@ -11,12 +11,13 @@ const Hero = () => {
   const [typingSpeed, setTypingSpeed] = useState(150);
 
   const words = [
-    'Software Engineer',
-    'AI Enthusiast', 
-    'Ado Music Fan',
-    'Golf Player',
-    'Pickleball Lover',
-    'Problem Solver'
+    'Software Engineer & IT Associate',
+    'AI & Machine Learning Enthusiast', 
+    'Ado Music Superfan 🎵',
+    'Golf Strategist ⛳',
+    'Pickleball Champion 🏓',
+    'Full-Stack Developer',
+    'Data Science Researcher'
   ];
 
   useEffect(() => {
@@ -29,10 +30,10 @@ const Hero = () => {
         : fullText.substring(0, text.length + 1)
       );
 
-      setTypingSpeed(isDeleting ? 30 : 150);
+      setTypingSpeed(isDeleting ? 30 : 120);
 
       if (!isDeleting && text === fullText) {
-        setTimeout(() => setIsDeleting(true), 500);
+        setTimeout(() => setIsDeleting(true), 1000);
       } else if (isDeleting && text === '') {
         setIsDeleting(false);
         setLoopNum(loopNum + 1);
@@ -48,22 +49,41 @@ const Hero = () => {
       <div className="hero-container">
         <div className="hero-content">
           <div className="hero-text">
+            <div className="hero-badge">
+              <FaRocket />
+              <span>Available for opportunities</span>
+            </div>
             <h1 className="hero-title">
-              Hi, I'm <GlitchText><span className="name-highlight">Taiki Yamashita</span></GlitchText>
+              <GlitchText><span className="name-highlight">Taiki Yamashita</span></GlitchText>
             </h1>
             <div className="hero-subtitle">
-              I'm a <span className="typewriter">{text}</span>
+              <span className="typewriter">{text}</span>
               <span className="cursor">|</span>
             </div>
             <p className="hero-description">
-              Passionate software engineer building AI-powered solutions, obsessed with Ado's music, 
-              and always ready for a round of golf or pickleball. Currently transforming the 
-              geotechnical engineering industry with cutting-edge technology.
+              Building the future with AI-powered solutions at Geolabs. When I'm not revolutionizing 
+              geotechnical engineering with code, I'm jamming to Ado's incredible vocals or perfecting 
+              my golf swing on Hawaiian courses.
             </p>
+            <div className="hero-stats">
+              <div className="stat">
+                <span className="stat-number">8K+</span>
+                <span className="stat-label">Reports Processed</span>
+              </div>
+              <div className="stat">
+                <span className="stat-number">450+</span>
+                <span className="stat-label">Students Mentored</span>
+              </div>
+              <div className="stat">
+                <span className="stat-number">∞</span>
+                <span className="stat-label">Ado Songs</span>
+              </div>
+            </div>
             <div className="hero-buttons">
               <NeonButton onClick={() => document.getElementById('about').scrollIntoView({ behavior: 'smooth' })} 
                       variant="primary">
-                Discover My Story
+                <FaCode />
+                View My Work
               </NeonButton>
               <NeonButton onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })} 
                       variant="secondary">
@@ -71,7 +91,7 @@ const Hero = () => {
               </NeonButton>
             </div>
             <div className="social-links">
-              <a href="https://github.com/taikiy49" target="_blank" rel="noopener noreferrer" className="social-link">
+              <a href="https://github.com/Taikiy49" target="_blank" rel="noopener noreferrer" className="social-link">
                 <FaGithub />
               </a>
               <a href="https://linkedin.com/in/taikiyamashita" target="_blank" rel="noopener noreferrer" className="social-link">
@@ -86,7 +106,7 @@ const Hero = () => {
             <div className="profile-container">
               <div className="profile-ring"></div>
               <div className="profile-ring-2"></div>
-              <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400" 
+              <img src="src/taiki-img2.png" 
                    alt="Taiki Yamashita" className="profile-image" />
               <div className="floating-icons">
                 <div className="floating-icon music"><FaMusic /></div>

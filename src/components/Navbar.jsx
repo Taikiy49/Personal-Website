@@ -8,7 +8,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      setIsScrolled(window.scrollY > 30);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -34,8 +34,10 @@ const Navbar = () => {
         <div className={`nav-menu ${isMobileMenuOpen ? 'active' : ''}`}>
           <button onClick={() => scrollToSection('hero')} className="nav-link">Home</button>
           <button onClick={() => scrollToSection('about')} className="nav-link">About</button>
+          <button onClick={() => scrollToSection('techstack')} className="nav-link">Tech Stack</button>
           <button onClick={() => scrollToSection('experience')} className="nav-link">Experience</button>
-          <button onClick={() => scrollToSection('projects')} className="nav-link">Sports</button>
+          <button onClick={() => scrollToSection('projects')} className="nav-link">Passions</button>
+          <button onClick={() => scrollToSection('blog')} className="nav-link">Blog</button>
           <button onClick={() => scrollToSection('contact')} className="nav-link">Contact</button>
         </div>
 

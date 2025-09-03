@@ -1,25 +1,12 @@
 .experience-section {
-  padding: 60px 0;
+  padding: 40px 0;
   background: linear-gradient(135deg, #1a1a2e 0%, #0a0a0f 50%, #1a1a2e 100%);
   position: relative;
 }
 
-.experience-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: 
-    linear-gradient(45deg, transparent 49%, rgba(0, 212, 255, 0.03) 50%, transparent 51%),
-    linear-gradient(-45deg, transparent 49%, rgba(0, 153, 204, 0.03) 50%, transparent 51%);
-  background-size: 60px 60px;
-}
-
 .timeline {
   position: relative;
-  max-width: 1000px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
@@ -37,7 +24,7 @@
 
 .timeline-item {
   position: relative;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   animation: fadeInUp 0.8s ease-out both;
 }
 
@@ -56,60 +43,51 @@
 .timeline-marker {
   position: absolute;
   left: 50%;
-  top: 20px;
-  width: 50px;
-  height: 50px;
+  top: 15px;
+  width: 40px;
+  height: 40px;
   background: linear-gradient(45deg, #00d4ff, #0099cc);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   transform: translateX(-50%);
-  font-size: 20px;
+  font-size: 16px;
   color: white;
-  box-shadow: 0 0 25px rgba(0, 212, 255, 0.5);
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
   z-index: 2;
-  border: 3px solid #0a0a0f;
+  border: 2px solid #0a0a0f;
 }
 
 .timeline-content {
-  padding: 20px;
+  padding: 15px;
   position: relative;
   transition: all 0.3s ease;
-  background: rgba(26, 26, 46, 0.4);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
-}
-
-.timeline-content:hover {
-  transform: translateY(-3px);
-  border-color: rgba(0, 212, 255, 0.3);
 }
 
 .experience-header {
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 
 .job-title {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: 700;
   color: #00d4ff;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .company {
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   font-weight: 600;
   color: #ffffff;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
   display: block;
 }
 
 .job-meta {
   display: flex;
-  gap: 15px;
-  font-size: 0.85rem;
+  gap: 12px;
+  font-size: 0.7rem;
   color: #b0b0b0;
   flex-wrap: wrap;
 }
@@ -117,29 +95,44 @@
 .location, .period {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 3px;
 }
 
 .job-description {
   color: #c0c0c0;
   font-style: italic;
-  margin-bottom: 15px;
-  line-height: 1.5;
-  font-size: 0.95rem;
+  margin-bottom: 10px;
+  line-height: 1.4;
+  font-size: 0.8rem;
+}
+
+.impact-badge {
+  background: rgba(0, 212, 255, 0.1);
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  border-radius: 15px;
+  padding: 4px 10px;
+  margin-bottom: 12px;
+  display: inline-block;
+}
+
+.impact-badge span {
+  color: #00d4ff;
+  font-size: 0.7rem;
+  font-weight: 500;
 }
 
 .achievements {
   list-style: none;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .achievements li {
   position: relative;
-  padding-left: 20px;
-  margin-bottom: 8px;
+  padding-left: 15px;
+  margin-bottom: 6px;
   color: #d0d0d0;
-  line-height: 1.5;
-  font-size: 0.9rem;
+  line-height: 1.4;
+  font-size: 0.75rem;
 }
 
 .achievements li::before {
@@ -147,22 +140,22 @@
   position: absolute;
   left: 0;
   color: #00d4ff;
-  font-size: 10px;
+  font-size: 8px;
 }
 
 .technologies {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 6px;
 }
 
 .tech-tag {
   background: rgba(0, 212, 255, 0.1);
   border: 1px solid rgba(0, 212, 255, 0.3);
   color: #00d4ff;
-  padding: 4px 10px;
-  border-radius: 12px;
-  font-size: 0.75rem;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 0.65rem;
   font-weight: 500;
   transition: all 0.3s ease;
 }
@@ -174,25 +167,25 @@
 
 @media screen and (max-width: 768px) {
   .timeline::before {
-    left: 25px;
+    left: 20px;
   }
 
   .timeline-marker {
-    left: 25px;
-    width: 35px;
-    height: 35px;
-    font-size: 14px;
+    left: 20px;
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
   }
 
   .timeline-item:nth-child(odd) .timeline-content,
   .timeline-item:nth-child(even) .timeline-content {
-    margin-left: 60px;
+    margin-left: 50px;
     margin-right: 0;
     text-align: left;
   }
 
   .job-meta {
     flex-direction: column;
-    gap: 6px;
+    gap: 4px;
   }
 }

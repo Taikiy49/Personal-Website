@@ -1,17 +1,20 @@
 .neon-btn {
   position: relative;
   background: transparent;
-  border: 2px solid #00d4ff;
-  padding: 10px 25px;
-  border-radius: 25px;
+  border: 1px solid #00d4ff;
+  padding: 8px 20px;
+  border-radius: 20px;
   color: #00d4ff;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-size: 14px;
+  font-size: 0.8rem;
   overflow: hidden;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .neon-btn::before {
@@ -31,10 +34,10 @@
 
 .neon-btn:hover {
   color: #ffffff;
-  text-shadow: 0 0 10px #00d4ff;
+  text-shadow: 0 0 8px #00d4ff;
   box-shadow: 
-    0 0 20px rgba(0, 212, 255, 0.5),
-    inset 0 0 20px rgba(0, 212, 255, 0.1);
+    0 0 15px rgba(0, 212, 255, 0.5),
+    inset 0 0 15px rgba(0, 212, 255, 0.1);
 }
 
 .neon-btn-primary {
@@ -46,8 +49,18 @@
 .neon-btn-primary:hover {
   transform: translateY(-2px);
   box-shadow: 
-    0 10px 25px rgba(0, 212, 255, 0.4),
-    0 0 30px rgba(0, 212, 255, 0.3);
+    0 8px 20px rgba(0, 212, 255, 0.4),
+    0 0 25px rgba(0, 212, 255, 0.3);
+}
+
+.neon-btn-secondary {
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+}
+
+.neon-btn-secondary:hover {
+  border-color: #00d4ff;
+  color: #00d4ff;
 }
 
 .btn-text {
@@ -64,7 +77,7 @@
   background: linear-gradient(45deg, #00d4ff, #0099cc);
   opacity: 0;
   transition: opacity 0.3s ease;
-  border-radius: 23px;
+  border-radius: 18px;
 }
 
 .neon-btn:hover .btn-glow {
