@@ -9,7 +9,7 @@ body {
   background: #0a0a0f;
   color: #ffffff;
   overflow-x: hidden;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 .app {
@@ -17,9 +17,9 @@ body {
   min-height: 100vh;
 }
 
-/* Scrollbar styling */
+/* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
@@ -28,18 +28,14 @@ body {
 
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(45deg, #00d4ff, #0099cc);
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(45deg, #0099cc, #00d4ff);
+  border-radius: 3px;
 }
 
 /* Global animations */
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
@@ -50,7 +46,7 @@ body {
 @keyframes slideInLeft {
   from {
     opacity: 0;
-    transform: translateX(-50px);
+    transform: translateX(-30px);
   }
   to {
     opacity: 1;
@@ -61,7 +57,7 @@ body {
 @keyframes slideInRight {
   from {
     opacity: 0;
-    transform: translateX(50px);
+    transform: translateX(30px);
   }
   to {
     opacity: 1;
@@ -71,32 +67,23 @@ body {
 
 @keyframes glow {
   0%, 100% {
-    box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+    box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
   }
   50% {
-    box-shadow: 0 0 40px rgba(0, 212, 255, 0.6);
-  }
-}
-
-@keyframes pulse {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(0, 212, 255, 0.6);
   }
 }
 
 /* Utility classes */
 .section {
-  padding: 100px 0;
+  padding: 60px 0;
   position: relative;
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 15px;
 }
 
 .text-gradient {
@@ -109,32 +96,33 @@ body {
 .btn-primary {
   background: linear-gradient(45deg, #00d4ff, #0099cc);
   border: none;
-  padding: 12px 30px;
-  border-radius: 25px;
+  padding: 10px 25px;
+  border-radius: 20px;
   color: white;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
   text-decoration: none;
   display: inline-block;
+  font-size: 14px;
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(0, 212, 255, 0.3);
+  box-shadow: 0 8px 20px rgba(0, 212, 255, 0.3);
 }
 
 .glass-card {
-  background: rgba(26, 26, 46, 0.7);
+  background: rgba(26, 26, 46, 0.6);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 15px;
-  padding: 30px;
+  border-radius: 12px;
+  padding: 20px;
   transition: all 0.3s ease;
 }
 
 .glass-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-3px);
   border-color: rgba(0, 212, 255, 0.3);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
 }

@@ -1,7 +1,20 @@
 .experience-section {
-  padding: 100px 0;
+  padding: 60px 0;
   background: linear-gradient(135deg, #1a1a2e 0%, #0a0a0f 50%, #1a1a2e 100%);
   position: relative;
+}
+
+.experience-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    linear-gradient(45deg, transparent 49%, rgba(0, 212, 255, 0.03) 50%, transparent 51%),
+    linear-gradient(-45deg, transparent 49%, rgba(0, 153, 204, 0.03) 50%, transparent 51%);
+  background-size: 60px 60px;
 }
 
 .timeline {
@@ -16,26 +29,26 @@
   left: 50%;
   top: 0;
   bottom: 0;
-  width: 3px;
+  width: 2px;
   background: linear-gradient(to bottom, #00d4ff, #0099cc, #00d4ff);
   transform: translateX(-50%);
-  border-radius: 2px;
+  border-radius: 1px;
 }
 
 .timeline-item {
   position: relative;
-  margin-bottom: 60px;
-  animation: fadeInUp 1s ease-out both;
+  margin-bottom: 40px;
+  animation: fadeInUp 0.8s ease-out both;
 }
 
 .timeline-item:nth-child(odd) .timeline-content {
   margin-left: 0;
-  margin-right: 60%;
+  margin-right: 55%;
   text-align: right;
 }
 
 .timeline-item:nth-child(even) .timeline-content {
-  margin-left: 60%;
+  margin-left: 55%;
   margin-right: 0;
   text-align: left;
 }
@@ -43,55 +56,60 @@
 .timeline-marker {
   position: absolute;
   left: 50%;
-  top: 30px;
-  width: 60px;
-  height: 60px;
+  top: 20px;
+  width: 50px;
+  height: 50px;
   background: linear-gradient(45deg, #00d4ff, #0099cc);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   transform: translateX(-50%);
-  font-size: 24px;
+  font-size: 20px;
   color: white;
-  box-shadow: 0 0 30px rgba(0, 212, 255, 0.5);
+  box-shadow: 0 0 25px rgba(0, 212, 255, 0.5);
   z-index: 2;
-  animation: pulse 2s ease-in-out infinite;
+  border: 3px solid #0a0a0f;
 }
 
 .timeline-content {
-  padding: 30px;
+  padding: 20px;
   position: relative;
   transition: all 0.3s ease;
+  background: rgba(26, 26, 46, 0.4);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
 }
 
 .timeline-content:hover {
-  transform: translateY(-5px);
+  transform: translateY(-3px);
+  border-color: rgba(0, 212, 255, 0.3);
 }
 
 .experience-header {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .job-title {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 700;
   color: #00d4ff;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .company {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 600;
   color: #ffffff;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   display: block;
 }
 
 .job-meta {
   display: flex;
-  gap: 20px;
-  font-size: 0.9rem;
+  gap: 15px;
+  font-size: 0.85rem;
   color: #b0b0b0;
   flex-wrap: wrap;
 }
@@ -99,27 +117,29 @@
 .location, .period {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 4px;
 }
 
 .job-description {
   color: #c0c0c0;
   font-style: italic;
-  margin-bottom: 20px;
-  line-height: 1.6;
+  margin-bottom: 15px;
+  line-height: 1.5;
+  font-size: 0.95rem;
 }
 
 .achievements {
   list-style: none;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .achievements li {
   position: relative;
-  padding-left: 25px;
-  margin-bottom: 12px;
+  padding-left: 20px;
+  margin-bottom: 8px;
   color: #d0d0d0;
-  line-height: 1.6;
+  line-height: 1.5;
+  font-size: 0.9rem;
 }
 
 .achievements li::before {
@@ -127,22 +147,22 @@
   position: absolute;
   left: 0;
   color: #00d4ff;
-  font-size: 12px;
+  font-size: 10px;
 }
 
 .technologies {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 8px;
 }
 
 .tech-tag {
   background: rgba(0, 212, 255, 0.1);
   border: 1px solid rgba(0, 212, 255, 0.3);
   color: #00d4ff;
-  padding: 5px 12px;
-  border-radius: 15px;
-  font-size: 0.85rem;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.75rem;
   font-weight: 500;
   transition: all 0.3s ease;
 }
@@ -154,25 +174,25 @@
 
 @media screen and (max-width: 768px) {
   .timeline::before {
-    left: 30px;
+    left: 25px;
   }
 
   .timeline-marker {
-    left: 30px;
-    width: 40px;
-    height: 40px;
-    font-size: 16px;
+    left: 25px;
+    width: 35px;
+    height: 35px;
+    font-size: 14px;
   }
 
   .timeline-item:nth-child(odd) .timeline-content,
   .timeline-item:nth-child(even) .timeline-content {
-    margin-left: 80px;
+    margin-left: 60px;
     margin-right: 0;
     text-align: left;
   }
 
   .job-meta {
     flex-direction: column;
-    gap: 8px;
+    gap: 6px;
   }
 }
