@@ -26,6 +26,26 @@ const Experience = () => {
       impact: "Revolutionized daily workflows by centralizing all company resources into one intelligent platform"
     },
     {
+      title: "Software Engineer Intern",
+      company: "Geolabs, Inc.",
+      location: "Honolulu, HI",
+      period: "Jun 2024 – Aug 2024",
+      type: "internship",
+      description: "Developed foundational components and features for the Geolabs Software Platform, gaining hands-on experience in full-stack development and enterprise software architecture.",
+      achievements: [
+        "Built initial prototypes for the AI-powered document search system using Python and Flask",
+        "Developed user authentication flow integration with Microsoft SSO for secure access",
+        "Created database schema designs and implemented CRUD operations for project management",
+        "Designed responsive frontend components using React.js for optimal user experience",
+        "Implemented file upload and storage functionality connecting to AWS S3 services",
+        "Collaborated with senior engineers to establish coding standards and development workflows",
+        "Conducted testing and debugging of core platform features ensuring reliability",
+        "Documented technical specifications and user workflows for future development phases"
+      ],
+      technologies: ["React.js", "Python", "Flask", "JavaScript", "AWS S3", "Microsoft SSO", "Database Design", "REST APIs"],
+      impact: "Laid the technical foundation for what would become the comprehensive Geolabs Software Platform"
+    },
+    {
       title: "Data Science Intern",
       company: "National Science Foundation",
       location: "Irvine, CA",
@@ -103,6 +123,7 @@ const Experience = () => {
   const getTypeIcon = (type) => {
     switch(type) {
       case 'current': return <FaRocket />;
+      case 'internship': return <FaBriefcase />;
       case 'research': return <FaChartLine />;
       case 'education': return <FaDatabase />;
       default: return <FaBriefcase />;
