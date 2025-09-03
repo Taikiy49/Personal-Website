@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
-import '../styles/ParticleBackground.css';
+import '../styles/AnimatedBackground.css';
 
-const ParticleBackground = () => {
+const AnimatedBackground = () => {
   const canvasRef = useRef(null);
 
   useEffect(() => {
@@ -9,7 +9,6 @@ const ParticleBackground = () => {
     const ctx = canvas.getContext('2d');
     let animationFrameId;
 
-    // Set canvas size
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
@@ -18,18 +17,20 @@ const ParticleBackground = () => {
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
 
-    // Particle system
+    // Enhanced particle system
     const particles = [];
-    const particleCount = 100;
+    const particleCount = 80;
+    const connections = [];
 
     class Particle {
       constructor() {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
-        this.vx = (Math.random() - 0.5) * 0.5;
-        this.vy = (Math.random() - 0.5) * 0.5;
-        this.size = Math.random() * 2 + 1;
-        this.opacity = Math.random() * 0.5 + 0.2;
+        this.vx = (Math.random() - 0.5) * 0.8;
+        this.vy = (Math.random() - 0.5) * 0.8;
+        this.size = Math.random() * 3 + 1;
+        this.opacity = Math.random() * 0.6 + 0.2;
+        this.hue = Math.random() * 60 + 180; // Blue range
       }
 
       update() {
@@ -38,12 +39,24 @@ const ParticleBackground = () => {
 
         if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
         if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
+
+        // Boundary bounce with slight randomness
+        if (this.x < 0) this.x = 0;
+        if (this.x > canvas.width) this.x = canvas.width;
+        if (this.y < 0) this.y = 0;
+        if (this.y > canvas.height) this.y = canvas.height;
       }
 
       draw() {
         ctx.save();
         ctx.globalAlpha = this.opacity;
-        ctx.fillStyle = '#00d4ff';
+        
+        // Create gradient for each particle
+        const gradient = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.size * 2);
+        gradient.addColorStop(0, `hsl(${this.hue}, 100%, 70%)`);
+        gradient.addColorStop(1, 'transparent');
+        
+        ctx.fillStyle = gradient;
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();
@@ -66,18 +79,19 @@ const ParticleBackground = () => {
         particle.draw();
       });
 
-      // Draw connections
+      // Draw connections with varying opacity
       particles.forEach((particle, i) => {
         particles.slice(i + 1).forEach(otherParticle => {
           const dx = particle.x - otherParticle.x;
           const dy = particle.y - otherParticle.y;
           const distance = Math.sqrt(dx * dx + dy * dy);
 
-          if (distance < 100) {
+          if (distance < 120) {
             ctx.save();
-            ctx.globalAlpha = (100 - distance) / 100 * 0.2;
+            const opacity = (120 - distance) / 120 * 0.3;
+            ctx.globalAlpha = opacity;
             ctx.strokeStyle = '#00d4ff';
-            ctx.lineWidth = 1;
+            ctx.lineWidth = 0.8;
             ctx.beginPath();
             ctx.moveTo(particle.x, particle.y);
             ctx.lineTo(otherParticle.x, otherParticle.y);
@@ -98,7 +112,7 @@ const ParticleBackground = () => {
     };
   }, []);
 
-  return <canvas ref={canvasRef} className="particle-canvas" />;
+  return <canvas ref={canvasRef} className="animated-canvas" />;
 };
 
-export default ParticleBackground;
+export default AnimatedBackground;

@@ -1,80 +1,99 @@
 .contact-section {
-  padding: 100px 0;
+  padding: 60px 0;
   background: linear-gradient(135deg, #1a1a2e 0%, #0a0a0f 50%, #1a1a2e 100%);
   position: relative;
+}
+
+.contact-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    conic-gradient(from 0deg at 50% 50%, transparent 0deg, rgba(0, 212, 255, 0.03) 90deg, transparent 180deg, rgba(0, 153, 204, 0.03) 270deg, transparent 360deg);
+  background-size: 200px 200px;
 }
 
 .contact-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  gap: 40px;
   position: relative;
   z-index: 2;
 }
 
 .contact-card {
-  animation: slideInLeft 1s ease-out both;
+  animation: slideInLeft 0.8s ease-out both;
+  background: rgba(26, 26, 46, 0.4);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 25px;
 }
 
 .contact-card h3 {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   color: #00d4ff;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .contact-card p {
   color: #c0c0c0;
-  line-height: 1.7;
-  margin-bottom: 30px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  font-size: 0.9rem;
 }
 
 .contact-methods {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .contact-method {
   display: flex;
   align-items: center;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   transition: all 0.3s ease;
 }
 
 .contact-method:hover {
-  transform: translateX(10px);
+  transform: translateX(8px);
 }
 
 .method-icon {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   background: linear-gradient(45deg, #00d4ff, #0099cc);
-  border-radius: 12px;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
-  margin-right: 20px;
+  font-size: 16px;
+  margin-right: 15px;
   color: white;
 }
 
 .method-info h4 {
   color: #ffffff;
-  font-size: 1.1rem;
-  margin-bottom: 5px;
+  font-size: 1rem;
+  margin-bottom: 4px;
 }
 
 .method-info p {
   color: #b0b0b0;
   margin: 0;
+  font-size: 0.85rem;
 }
 
 .social-links {
   display: flex;
-  gap: 15px;
+  gap: 12px;
 }
 
 .social-link {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   display: flex;
@@ -83,37 +102,37 @@
   color: #ffffff;
   text-decoration: none;
   transition: all 0.3s ease;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .social-link:hover {
   background: linear-gradient(45deg, #00d4ff, #0099cc);
-  transform: translateY(-3px) scale(1.1);
-  box-shadow: 0 10px 25px rgba(0, 212, 255, 0.3);
+  transform: translateY(-2px) scale(1.1);
+  box-shadow: 0 8px 20px rgba(0, 212, 255, 0.3);
 }
 
 .contact-form-container {
-  animation: slideInRight 1s ease-out both;
+  animation: slideInRight 0.8s ease-out both;
 }
 
 .contact-form h3 {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   color: #00d4ff;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .form-group {
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .form-input, .form-textarea {
   width: 100%;
-  padding: 15px 20px;
+  padding: 12px 15px;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
+  border-radius: 10px;
   color: #ffffff;
-  font-size: 16px;
+  font-size: 14px;
   transition: all 0.3s ease;
   font-family: inherit;
 }
@@ -122,7 +141,7 @@
   outline: none;
   border-color: #00d4ff;
   background: rgba(255, 255, 255, 0.08);
-  box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.2);
 }
 
 .form-input::placeholder, .form-textarea::placeholder {
@@ -131,29 +150,29 @@
 
 .form-textarea {
   resize: vertical;
-  min-height: 120px;
+  min-height: 100px;
 }
 
 .submit-btn {
   background: linear-gradient(45deg, #00d4ff, #0099cc);
   border: none;
-  padding: 15px 40px;
-  border-radius: 30px;
+  padding: 12px 30px;
+  border-radius: 25px;
   color: white;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-size: 16px;
+  font-size: 14px;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   width: 100%;
   justify-content: center;
 }
 
 .submit-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 15px 35px rgba(0, 212, 255, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0, 212, 255, 0.4);
 }
 
 .submit-btn:active {
@@ -163,6 +182,6 @@
 @media screen and (max-width: 768px) {
   .contact-content {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 30px;
   }
 }

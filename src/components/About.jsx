@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaHeart, FaCode, FaMusic, FaGolfBall } from 'react-icons/fa';
+import HolographicCard from './HolographicCard';
 import '../styles/About.css';
 
 const About = () => {
@@ -13,7 +14,7 @@ const About = () => {
 
         <div className="about-content">
           <div className="about-text">
-            <div className="about-card glass-card">
+            <HolographicCard className="about-card">
               <div className="card-icon">
                 <FaHeart />
               </div>
@@ -30,33 +31,33 @@ const About = () => {
                 When I'm not coding, you'll find me listening to Ado's incredible music or out on the 
                 golf course perfecting my swing.
               </p>
-            </div>
+            </HolographicCard>
           </div>
 
           <div className="about-highlights">
-            <div className="highlight-card glass-card">
+            <HolographicCard className="highlight-card">
               <div className="highlight-icon">
                 <FaCode />
               </div>
               <h4>Tech Passion</h4>
               <p>Specializing in AI, full-stack development, and data science with a focus on creating impactful solutions.</p>
-            </div>
+            </HolographicCard>
 
-            <div className="highlight-card glass-card">
+            <HolographicCard className="highlight-card">
               <div className="highlight-icon">
                 <FaMusic />
               </div>
               <h4>Ado Enthusiast</h4>
               <p>Huge fan of Ado's powerful vocals and artistic vision. Her music fuels my creativity and coding sessions.</p>
-            </div>
+            </HolographicCard>
 
-            <div className="highlight-card glass-card">
+            <HolographicCard className="highlight-card">
               <div className="highlight-icon">
                 <FaGolfBall />
               </div>
               <h4>Sports Lover</h4>
               <p>Golf and pickleball provide the perfect balance to my tech career, teaching patience and strategic thinking.</p>
-            </div>
+            </HolographicCard>
           </div>
         </div>
 

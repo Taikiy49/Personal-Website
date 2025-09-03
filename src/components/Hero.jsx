@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { FaGithub, FaLinkedin, FaFileAlt, FaMusic, FaGolfBall } from 'react-icons/fa';
+import GlitchText from './GlitchText';
+import NeonButton from './NeonButton';
 import '../styles/Hero.css';
 
 const Hero = () => {
@@ -47,7 +49,7 @@ const Hero = () => {
         <div className="hero-content">
           <div className="hero-text">
             <h1 className="hero-title">
-              Hi, I'm <span className="name-highlight">Taiki Yamashita</span>
+              Hi, I'm <GlitchText><span className="name-highlight">Taiki Yamashita</span></GlitchText>
             </h1>
             <div className="hero-subtitle">
               I'm a <span className="typewriter">{text}</span>
@@ -59,14 +61,14 @@ const Hero = () => {
               geotechnical engineering industry with cutting-edge technology.
             </p>
             <div className="hero-buttons">
-              <button onClick={() => document.getElementById('about').scrollIntoView({ behavior: 'smooth' })} 
-                      className="btn-primary">
+              <NeonButton onClick={() => document.getElementById('about').scrollIntoView({ behavior: 'smooth' })} 
+                      variant="primary">
                 Discover My Story
-              </button>
-              <button onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })} 
-                      className="btn-secondary">
+              </NeonButton>
+              <NeonButton onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })} 
+                      variant="secondary">
                 Let's Connect
-              </button>
+              </NeonButton>
             </div>
             <div className="social-links">
               <a href="https://github.com/taikiy49" target="_blank" rel="noopener noreferrer" className="social-link">
