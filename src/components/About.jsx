@@ -11,7 +11,7 @@ const About = () => {
       label: 'Passions',
       sublabel: 'What drives me',
       icon: <FaUser size={40} />,
-      description: 'Beyond coding, I'm passionate about Japanese culture, music, and staying active. These interests shape who I am and inspire my work.',
+      description: "Beyond coding, I'm passionate about Japanese culture, music, and staying active. These interests shape who I am and inspire my work.",
       linkText: 'Read more →',
       route: '/passions',
     },

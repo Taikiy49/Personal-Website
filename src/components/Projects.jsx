@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/Projects.css';
 
-const Sports = () => {
+const Projects = () => {
   return (
     <div className="sports-section">
       <h1>Sports & Recreation</h1>
@@ -62,3 +62,4 @@ const Sports = () => {
   );
 };
 
+export default Projects;
