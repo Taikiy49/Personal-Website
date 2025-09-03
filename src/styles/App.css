@@ -6,7 +6,8 @@
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  background: #0a0a0f;
+  background: linear-gradient(135deg, #0a0a1a 0%, #1a1a2e 25%, #16213e 50%, #0f1419 75%, #0a0a0f 100%);
+  background-attachment: fixed;
   color: #ffffff;
   overflow-x: hidden;
   line-height: 1.5;
@@ -15,6 +16,8 @@ body {
 .app {
   position: relative;
   min-height: 100vh;
+  background: linear-gradient(135deg, #0a0a1a 0%, #1a1a2e 25%, #16213e 50%, #0f1419 75%, #0a0a0f 100%);
+  background-attachment: fixed;
 }
 
 /* Custom scrollbar */
