@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaCopy, FaCheck, FaPython, FaJs, FaReact, FaDatabase } from 'react-icons/fa';
+import { FaCopy, FaCheck, FaPython, FaReact, FaDatabase } from 'react-icons/fa';
 import '../styles/CodeSnippets.css';
 
 const CodeSnippets = () => {
@@ -240,7 +240,7 @@ class OCRProcessor:
     def clean_text(self, text):
         """Clean and format extracted text"""
         # Remove extra whitespace
-        text = re.sub(r'\s+', ' ', text)
+        text = re.sub(r'\\s+', ' ', text)
         
         # Fix common OCR errors
         text = text.replace('|', 'I')

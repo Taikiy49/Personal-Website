@@ -61,7 +61,7 @@ const SearchBar = () => {
     } else {
       setResults([]);
     }
-  }, [query]);
+  }, [query, searchableContent]);
 
   const handleResultClick = (result) => {
     if (result.id) {

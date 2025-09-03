@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaGolfBall, FaTableTennis, FaMusic, FaHeart, FaTrophy, FaChartLine, FaPlay, FaDumbbell, FaPlane, FaMapMarkedAlt } from 'react-icons/fa';
+import { FaGolfBall, FaTableTennis, FaMusic, FaHeart, FaTrophy, FaDumbbell, FaPlane, FaMapMarkedAlt } from 'react-icons/fa';
 import '../styles/Projects.css';
 
 const Projects = () => {

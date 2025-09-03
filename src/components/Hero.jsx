@@ -8,14 +8,14 @@ const Hero = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [typingSpeed, setTypingSpeed] = useState(150);
 
-  const words = [
+  const words = React.useMemo(() => [
     'Software Engineer',
     'AI Enthusiast', 
     'Fitness Enthusiast',
     'Golf Player',
     'Travel Lover',
     'Problem Solver'
-  ];
+  ], []);
 
   useEffect(() => {
     const handleType = () => {
