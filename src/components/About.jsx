@@ -1,70 +1,85 @@
-import '../styles/About.css';
 import React from 'react';
-import { FaBriefcase, FaProjectDiagram, FaBullseye, FaUser } from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom';
+import { FaHeart, FaCode, FaMusic, FaGolfBall } from 'react-icons/fa';
+import '../styles/About.css';
 
 const About = () => {
-  const navigate = useNavigate();
-
-  const items = [
-    {
-      label: 'Passions',
-      sublabel: 'What drives me',
-      icon: <FaUser size={40} />,
-      description: "Beyond coding, I'm passionate about Japanese culture, music, and staying active. These interests shape who I am and inspire my work.",
-      linkText: 'Read more →',
-      route: '/passions',
-    },
-    {
-      label: 'Experiences',
-      sublabel: 'Professional journey',
-      icon: <FaBriefcase size={40} />,
-      description: 'From software engineering at Geolabs to data science research at NSF, I've built AI systems, optimized workflows, and mentored students across diverse technical roles.',
-      linkText: 'See my experience →',
-      route: '/experiences',
-    },
-    {
-      label: 'Sports',
-      sublabel: 'Golf & Pickleball',
-      icon: <FaProjectDiagram size={40} />,
-      description: 'Golf and pickleball are my favorite ways to unwind and stay competitive. I love the strategy, precision, and mental focus these sports require.',
-      linkText: 'Learn about my sports →',
-      route: '/sports',
-    },
-    {
-      label: 'Music',
-      sublabel: 'Ado & J-Pop',
-      icon: <FaBullseye size={40} />,
-      description: 'Huge fan of Ado, the incredible Japanese singer. Her powerful vocals and unique style have been a constant source of inspiration and energy in my daily life.',
-      linkText: 'Explore my music taste →',
-      route: '/music',
-    },
-  ];
-
-  const handleClick = (route) => {
-    navigate(route);
-  };
-
   return (
-    <div className="about-container">
-      <div className="about-grid">
-        {items.map((item, index) => (
-          <div key={index} className="about-card">
-            <div className="about-card-header">
-              <div className="about-icon">{item.icon}</div>
-              <div>
-                <h2>{item.label}</h2>
-                <h3 className="about-sublabel">{item.sublabel}</h3>
+    <section id="about" className="about-section">
+      <div className="container">
+        <div className="section-header">
+          <h2 className="section-title">About Me</h2>
+          <p className="section-subtitle">Get to know the person behind the code</p>
+        </div>
+
+        <div className="about-content">
+          <div className="about-text">
+            <div className="about-card glass-card">
+              <div className="card-icon">
+                <FaHeart />
               </div>
+              <h3>My Story</h3>
+              <p>
+                Born and raised in the beautiful islands of Hawaii with Japanese heritage, I've always been 
+                fascinated by the intersection of technology and culture. My journey in software engineering 
+                began with curiosity about how things work and evolved into a passion for building 
+                meaningful solutions that make a real impact.
+              </p>
+              <p>
+                Currently working as a Software Engineer at Geolabs, where I'm revolutionizing the 
+                geotechnical engineering industry with AI-powered search systems and data visualization tools. 
+                When I'm not coding, you'll find me listening to Ado's incredible music or out on the 
+                golf course perfecting my swing.
+              </p>
             </div>
-            <p>{item.description}</p>
-            <span className="about-link" onClick={() => handleClick(item.route)}>
-              {item.linkText}
-            </span>
           </div>
-        ))}
+
+          <div className="about-highlights">
+            <div className="highlight-card glass-card">
+              <div className="highlight-icon">
+                <FaCode />
+              </div>
+              <h4>Tech Passion</h4>
+              <p>Specializing in AI, full-stack development, and data science with a focus on creating impactful solutions.</p>
+            </div>
+
+            <div className="highlight-card glass-card">
+              <div className="highlight-icon">
+                <FaMusic />
+              </div>
+              <h4>Ado Enthusiast</h4>
+              <p>Huge fan of Ado's powerful vocals and artistic vision. Her music fuels my creativity and coding sessions.</p>
+            </div>
+
+            <div className="highlight-card glass-card">
+              <div className="highlight-icon">
+                <FaGolfBall />
+              </div>
+              <h4>Sports Lover</h4>
+              <p>Golf and pickleball provide the perfect balance to my tech career, teaching patience and strategic thinking.</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="stats-container">
+          <div className="stat-item">
+            <div className="stat-number">8000+</div>
+            <div className="stat-label">Reports Processed</div>
+          </div>
+          <div className="stat-item">
+            <div className="stat-number">450+</div>
+            <div className="stat-label">Students Mentored</div>
+          </div>
+          <div className="stat-item">
+            <div className="stat-number">3+</div>
+            <div className="stat-label">Years Experience</div>
+          </div>
+          <div className="stat-item">
+            <div className="stat-number">∞</div>
+            <div className="stat-label">Ado Songs Played</div>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
