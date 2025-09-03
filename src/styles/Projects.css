@@ -1,39 +1,279 @@
-.sports-section {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 40px 40px 40px 40px;
-  padding-top: 12vh;
-  color: white;
+.projects-section {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 25%, #16213e 50%, #1a1a2e 75%, #0a0a0f 100%);
+  position: relative;
 }
 
-.sports-section h1 {
-  font-size: 36px;
+.projects-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 30% 30%, rgba(0, 212, 255, 0.05) 0%, transparent 50%),
+              radial-gradient(circle at 70% 70%, rgba(0, 153, 204, 0.05) 0%, transparent 50%);
+}
+
+.music-showcase {
+  margin-bottom: 80px;
+  position: relative;
+  z-index: 2;
+}
+
+.music-content {
+  animation: fadeInUp 1s ease-out both;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.music-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.music-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(45deg, #ff1744, #ff6b9d);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin-right: 20px;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.music-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+
+.music-subtitle {
+  color: #ff6b9d;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.music-description {
+  font-size: 1.1rem;
+  color: #c0c0c0;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.songs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.song-card {
+  background: rgba(255, 107, 157, 0.1);
+  border: 1px solid rgba(255, 107, 157, 0.2);
+  border-radius: 12px;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.song-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 107, 157, 0.4);
+  box-shadow: 0 15px 30px rgba(255, 107, 157, 0.2);
+}
+
+.song-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #ff6b9d;
+  margin-bottom: 8px;
+}
+
+.song-reason {
+  color: #d0d0d0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.music-impact {
+  background: rgba(255, 107, 157, 0.05);
+  border-radius: 12px;
+  padding: 25px;
+  border-left: 4px solid #ff6b9d;
+}
+
+.music-impact h4 {
+  color: #ff6b9d;
+  font-size: 1.2rem;
   margin-bottom: 10px;
 }
 
-.sports-section h2 {
-  font-size: 24px;
-  margin-top: 30px;
-  color: #3ac0fa;
-  margin-bottom: 15px;
+.music-impact p {
+  color: #c0c0c0;
+  line-height: 1.7;
 }
 
-.sports-section p {
-  font-size: 16px;
-  margin: 10px 0;
-  line-height: 1.6;
-  color: rgb(210, 210, 210);
+.sports-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 40px;
+  margin-bottom: 60px;
+  position: relative;
+  z-index: 2;
 }
 
-.sport-section {
-  margin-bottom: 40px;
-  padding: 25px;
-  border: 1px solid rgb(50, 50, 50);
-  border-radius: 10px;
-  background-color: rgb(15, 15, 15);
+.sport-card {
+  animation: fadeInUp 1s ease-out both;
+  overflow: hidden;
+  transition: all 0.3s ease;
 }
 
-.sport-section strong {
+.sport-card:hover {
+  transform: translateY(-10px) scale(1.02);
+}
+
+.sport-image {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 12px;
+  margin-bottom: 25px;
+}
+
+.sport-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.sport-card:hover .sport-image img {
+  transform: scale(1.1);
+}
+
+.sport-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(0, 212, 255, 0.8), rgba(0, 153, 204, 0.8));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.sport-card:hover .sport-overlay {
+  opacity: 1;
+}
+
+.sport-icon {
+  font-size: 48px;
   color: white;
+  animation: bounce 1s ease-in-out infinite;
 }
 
+.sport-content {
+  padding: 0 5px;
+}
+
+.sport-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #00d4ff;
+  margin-bottom: 8px;
+}
+
+.sport-subtitle {
+  color: #b0b0b0;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.sport-description {
+  color: #c0c0c0;
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+.sport-details, .sport-achievements {
+  margin-bottom: 25px;
+}
+
+.sport-details h4, .sport-achievements h4 {
+  color: #ffffff;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sport-details ul, .sport-achievements ul {
+  list-style: none;
+}
+
+.sport-details li, .sport-achievements li {
+  color: #d0d0d0;
+  margin-bottom: 8px;
+  padding-left: 20px;
+  position: relative;
+  line-height: 1.5;
+}
+
+.sport-details li::before {
+  content: '⛳';
+  position: absolute;
+  left: 0;
+  color: #00d4ff;
+}
+
+.sport-achievements li::before {
+  content: '🏆';
+  position: absolute;
+  left: 0;
+}
+
+.passion-summary {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  animation: fadeInUp 1s ease-out 0.6s both;
+  position: relative;
+  z-index: 2;
+}
+
+.passion-summary h3 {
+  font-size: 1.8rem;
+  color: #00d4ff;
+  margin-bottom: 20px;
+}
+
+.passion-summary p {
+  color: #c0c0c0;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .sports-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .sport-image {
+    height: 150px;
+  }
+
+  .sport-title {
+    font-size: 1.5rem;
+  }
+}

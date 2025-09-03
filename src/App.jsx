@@ -1,39 +1,40 @@
-import './App.css';
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import Cover from './components/Cover';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
 import About from './components/About';
-import Background from './components/Background'; // ✅ NEW IMPORT
-import Experiences from './components/Experiences';
+import Experience from './components/Experience';
 import Projects from './components/Projects';
-import Goals from './components/Goals';
+import Skills from './components/Skills';
+import Contact from './components/Contact';
+import ParticleBackground from './components/ParticleBackground';
 import ScrollToTop from './components/ScrollToTop';
+import './styles/App.css';
 
 const App = () => {
   return (
     <Router>
       <ScrollToTop />
-      <div className="app-container">
-        <div className="top-container">
-          <div className="contact-container">Taiki Owen Yamashita / 山下大輝</div>
-          <div className="icon-container">
-            <Link to="/" className="icon-home-style">Home</Link>
-            <Link to="/passions" className="icon-container-style">Passions</Link>
-            <Link to="/experiences" className="icon-container-style">Experiences</Link>
-            <Link to="/sports" className="icon-container-style">Sports</Link>
-            <Link to="/music" className="icon-container-style">Music</Link>
-          </div>
-        </div>
-
+      <div className="app">
+        <ParticleBackground />
+        <Navbar />
+        
         <Routes>
-          <Route path="/" element={<><Cover /><About /></>} />
-          <Route path="/passions" element={<Background />} />
-          <Route path="/experiences" element={<Experiences />} />
-          <Route path="/sports" element={<Projects />} />
-          <Route path="/music" element={<Goals />} />
+          <Route path="/" element={
+            <>
+              <Hero />
+              <About />
+              <Skills />
+              <Experience />
+              <Projects />
+              <Contact />
+            </>
+          } />
+          <Route path="/about" element={<About />} />
+          <Route path="/experience" element={<Experience />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
-
-        <footer>© 2025 Taiki Yamashita. All rights reserved.</footer>
       </div>
     </Router>
   );
