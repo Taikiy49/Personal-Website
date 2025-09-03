@@ -104,6 +104,37 @@ body {
   background-clip: text;
 }
 
+/* Image styles for sections */
+.about-image img,
+.tech-hero-image img,
+.experience-hero-image img,
+.contact-hero-image img,
+.passion-image img {
+  width: 100%;
+  max-width: 300px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 10px auto;
+  display: block;
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.about-image img:hover,
+.tech-hero-image img:hover,
+.experience-hero-image img:hover,
+.contact-hero-image img:hover,
+.passion-image img:hover {
+  transform: scale(1.02);
+  border-color: rgba(0, 212, 255, 0.6);
+  box-shadow: 0 8px 25px rgba(0, 212, 255, 0.2);
+}
+
+.passion-image {
+  margin-bottom: 15px;
+}
+
 .cyber-card {
   background: rgba(26, 26, 46, 0.8);
   backdrop-filter: blur(10px);

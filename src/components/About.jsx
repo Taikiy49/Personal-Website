@@ -15,6 +15,9 @@ const About = () => {
         <div className="about-content">
           <div className="about-main">
             <HolographicCard className="about-card">
+              <div className="about-image">
+                <img src="https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=400" alt="About me" />
+              </div>
               <div className="card-icon">
                 <FaHeart />
               </div>

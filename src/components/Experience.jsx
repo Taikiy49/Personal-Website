@@ -10,19 +10,20 @@ const Experience = () => {
       location: "Honolulu, HI",
       period: "Sep 2024 – Present",
       type: "current",
-      description: "Leading AI innovation in geotechnical engineering, transforming how engineers access critical project data through cutting-edge technology solutions.",
+      description: "Architecting and developing the comprehensive Geolabs Software Platform - an all-in-one web application that centralizes company knowledge, project data, reports, and tools into a single interface for enhanced productivity.",
       achievements: [
-        "Engineered AI-powered search system processing 8,000+ digitized geotechnical reports using advanced OCR and NLP",
-        "Designed secure MongoDB database with AES-256 encryption ensuring compliance with industry data protection standards",
-        "Built responsive React.js frontend with Flask backend featuring async file batching for optimal performance",
-        "Integrated Google's Gemini AI API for intelligent natural language search responses and data interpretation",
-        "Deployed scalable solution using AWS EC2 and Netlify, optimizing for reliability and global accessibility",
-        "Reduced report search time from hours to seconds, enabling faster engineering decisions and project timelines",
-        "Implemented ElasticSearch indexing across 100K+ keywords and technical phrases for precision search results",
-        "Developed automated data cleaning pipeline processing millions of engineering records with 99.5% accuracy"
+        "Architected comprehensive Geolabs Software Platform integrating AI assistance, database management, file storage, and inventory tracking",
+        "Implemented secure Microsoft SSO authentication with role-based permissions (Owner, Admin, User) for enterprise security",
+        "Built intelligent 'Ask AI' feature allowing employees to query company documents in plain English using advanced NLP",
+        "Developed OCR Lookup system converting scanned reports into searchable text, making legacy documents instantly accessible",
+        "Created S3 cloud storage integration for seamless project file management with upload/download capabilities",
+        "Designed Core Box Inventory system tracking physical drilling materials, locations, and status in real-time",
+        "Built comprehensive database viewer and editor tools for admins to manage company data efficiently",
+        "Integrated company-wide contacts directory with advanced search functionality across departments and roles",
+        "Reduced information retrieval time from hours to seconds, eliminating need to search through multiple systems"
       ],
-      technologies: ["Python", "React.js", "Flask", "MongoDB", "AWS EC2", "Google Gemini AI", "ElasticSearch", "OCR", "AES Encryption"],
-      impact: "Revolutionized geotechnical data access for engineering teams worldwide"
+      technologies: ["React.js", "Python", "Flask", "Microsoft SSO", "AWS S3", "OCR", "AI/NLP", "Database Management", "Cloud Storage"],
+      impact: "Revolutionized daily workflows by centralizing all company resources into one intelligent platform"
     },
     {
       title: "Data Science Intern",
@@ -114,6 +115,9 @@ const Experience = () => {
         <div className="section-header">
           <h2 className="section-title">Professional Journey</h2>
           <p className="section-subtitle">Building the future through technology and innovation</p>
+          <div className="experience-hero-image">
+            <img src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Professional experience" />
+          </div>
         </div>
 
         <div className="timeline">

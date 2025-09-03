@@ -30,6 +30,9 @@ const Contact = () => {
         <div className="section-header">
           <h2 className="section-title">Let's Connect</h2>
           <p className="section-subtitle">Ready to build something amazing together?</p>
+          <div className="contact-hero-image">
+            <img src="https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Let's connect" />
+          </div>
         </div>
 
         <div className="contact-content">
