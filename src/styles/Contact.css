@@ -4,6 +4,8 @@
   position: relative;
 }
 
+[data-theme="light"] .contact-section { background: transparent; }
+
 .contact-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -27,6 +29,7 @@
   margin-bottom: 20px;
   font-size: 0.8rem;
 }
+[data-theme="light"] .contact-card p { color: #4a5568; }
 
 .contact-methods {
   margin-bottom: 25px;
@@ -61,12 +64,14 @@
   font-size: 0.85rem;
   margin-bottom: 2px;
 }
+[data-theme="light"] .method-info h4 { color: #2d3748; }
 
 .method-info p {
   color: #b0b0b0;
   margin: 0;
   font-size: 0.75rem;
 }
+[data-theme="light"] .method-info p { color: #6b7280; }
 
 .social-links {
   display: flex;
@@ -86,6 +91,7 @@
   transition: all 0.3s ease;
   font-size: 12px;
 }
+[data-theme="light"] .social-link { background: rgba(0,0,0,0.06); color: #2d3748; }
 
 .social-link:hover {
   background: linear-gradient(45deg, #00d4ff, #0099cc);
@@ -118,6 +124,11 @@
   transition: all 0.3s ease;
   font-family: inherit;
 }
+[data-theme="light"] .form-input, [data-theme="light"] .form-textarea {
+  background: rgba(255,255,255,0.9);
+  border-color: rgba(0,0,0,0.08);
+  color: #2d3748;
+}
 
 .form-input:focus, .form-textarea:focus {
   outline: none;
@@ -129,6 +140,8 @@
 .form-input::placeholder, .form-textarea::placeholder {
   color: #888;
 }
+[data-theme="light"] .form-input::placeholder,
+[data-theme="light"] .form-textarea::placeholder { color: #9aa1ad; }
 
 .form-textarea {
   resize: vertical;

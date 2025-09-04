@@ -10,6 +10,12 @@
   overflow: hidden;
 }
 
+/* Light mode: crisp white glass instead of gray */
+[data-theme="light"] .holographic-card {
+  background: rgba(255, 255, 255, 0.85);
+  border-color: rgba(0, 0, 0, 0.08);
+}
+
 .holographic-card::before {
   content: '';
   position: absolute;
@@ -34,6 +40,11 @@
 
 .holographic-card:hover::before {
   opacity: 1;
+}
+
+/* Soften the holographic sheen on light */
+[data-theme="light"] .holographic-card:hover::before {
+  opacity: 0.6;
 }
 
 .holographic-overlay {

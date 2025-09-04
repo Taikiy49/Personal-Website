@@ -4,6 +4,8 @@
   position: relative;
 }
 
+[data-theme="light"] .code-snippets-section { background: transparent; }
+
 .snippets-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -55,17 +57,19 @@
   color: #ffffff;
   margin-bottom: 4px;
 }
+[data-theme="light"] .snippet-title { color: #2d3748; }
 
 .snippet-description {
   color: #b0b0b0;
   font-size: 0.8rem;
   line-height: 1.4;
 }
+[data-theme="light"] .snippet-description { color: #6b7280; }
 
 .copy-btn {
-  background: rgba(0, 212, 255, 0.1);
-  border: 1px solid rgba(0, 212, 255, 0.3);
-  color: #00d4ff;
+  background: rgba(0, 212, 255, 0.08);
+  border: 1px solid rgba(0, 212, 255, 0.25);
+  color: var(--neon-blue);
   padding: 8px 12px;
   border-radius: 6px;
   cursor: pointer;
@@ -87,6 +91,7 @@
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
+[data-theme="light"] .code-container { background: #f7fafc; border-color: rgba(0,0,0,0.08); }
 
 .code-block {
   margin: 0;
@@ -100,6 +105,7 @@
   white-space: pre-wrap;
   word-wrap: break-word;
 }
+[data-theme="light"] .code-block { color: #2d3748; }
 
 .code-block code {
   background: transparent;

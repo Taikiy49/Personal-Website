@@ -20,6 +20,19 @@
   --glow-strong: 0 0 28px rgba(0, 212, 255, 0.5);
 }
 
+/* Light theme variable overrides */
+[data-theme="light"] {
+  --neon-blue: #0066cc;
+  --neon-cyan: #00bcd4;
+  --neon-indigo: #3f51b5;
+  --neon-purple: #7c4dff;
+  --neon-pink: #ff6fa3;
+  --glass: rgba(255, 255, 255, 0.75);
+  --stroke: rgba(0, 102, 204, 0.25);
+  --glow-weak: 0 0 10px rgba(0, 102, 204, 0.2);
+  --glow-strong: 0 0 20px rgba(0, 102, 204, 0.3);
+}
+
 body {
   font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
   background: var(--deep-1);
@@ -32,38 +45,13 @@ body {
 .app {
   position: relative;
   min-height: 100vh;
-  /* Layered, animated deep-space gradient */
-  background:
-    radial-gradient(1200px 600px at 80% -10%, rgba(40, 255, 243, 0.12), transparent 60%),
-    radial-gradient(900px 500px at -10% 30%, rgba(91, 108, 255, 0.12), transparent 60%),
-    linear-gradient(135deg, var(--deep-1) 0%, var(--deep-4) 28%, var(--deep-3) 55%, var(--deep-2) 78%, var(--deep-1) 100%);
+  /* Clean, darker linear gradient background */
+  background: linear-gradient(135deg, var(--deep-1) 0%, #0b1422 35%, #0d1a2b 65%, var(--deep-2) 100%);
 }
 
-.app::before {
-  /* Soft moving neon beam */
-  content: '';
-  position: fixed;
-  inset: -20% -10%;
-  pointer-events: none;
-  background: conic-gradient(from 180deg at 70% 30%,
-    rgba(0, 212, 255, 0.10), rgba(138, 92, 246, 0.05), rgba(255, 107, 157, 0.06), rgba(0, 212, 255, 0.10));
-  filter: blur(40px);
-  animation: beam-drift 18s linear infinite;
-  opacity: 0.6;
-}
+.app::before { content: none; }
 
-.app::after {
-  /* Subtle neon grid */
-  content: '';
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  background-image:
-    linear-gradient(transparent 95%, rgba(0, 212, 255, 0.07) 96%, transparent 97%),
-    linear-gradient(90deg, transparent 95%, rgba(0, 212, 255, 0.06) 96%, transparent 97%);
-  background-size: 100% 28px, 28px 100%;
-  mask-image: radial-gradient(1000px 600px at 50% 10%, black, transparent 70%);
-}
+.app::after { content: none; }
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {

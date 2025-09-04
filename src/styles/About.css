@@ -1,10 +1,11 @@
 .about-section {
   padding: 40px 0;
-  background:
-    radial-gradient(700px 350px at 80% 10%, rgba(91,108,255,0.08), transparent 60%),
-    radial-gradient(600px 320px at 10% 30%, rgba(0,212,255,0.08), transparent 65%),
-    linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 50%, #0a0a0f 100%);
+  background: linear-gradient(135deg, var(--deep-1) 0%, var(--deep-4) 50%, var(--deep-1) 100%);
   position: relative;
+}
+
+[data-theme="light"] .about-section {
+  background: transparent;
 }
 
 .about-content {
@@ -37,6 +38,7 @@
   margin-bottom: 12px;
   color: #ffffff;
 }
+[data-theme="light"] .about-card h3 { color: #1f2937; }
 
 .about-card p {
   color: #c0c0c0;
@@ -44,6 +46,7 @@
   margin-bottom: 12px;
   font-size: 0.8rem;
 }
+[data-theme="light"] .about-card p { color: #4a5568; }
 
 .personal-info {
   display: flex;
@@ -94,12 +97,14 @@
   margin-bottom: 6px;
   color: #ffffff;
 }
+[data-theme="light"] .highlight-card h4 { color: #1f2937; }
 
 .highlight-card p {
   color: #b0b0b0;
   font-size: 0.75rem;
   line-height: 1.4;
 }
+[data-theme="light"] .highlight-card p { color: #6b7280; }
 
 .stats-grid {
   display: grid;

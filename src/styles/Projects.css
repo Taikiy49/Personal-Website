@@ -4,6 +4,10 @@
   position: relative;
 }
 
+[data-theme="light"] .projects-section {
+  background: transparent;
+}
+
 .passion-tabs {
   display: flex;
   justify-content: center;
@@ -13,9 +17,9 @@
 }
 
 .tab-btn {
-  background: rgba(26, 26, 46, 0.6);
-  border: 1px solid rgba(0, 212, 255, 0.2);
-  color: #b0b0b0;
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(0, 102, 204, 0.2);
+  color: #4a5568;
   padding: 8px 20px;
   border-radius: 25px;
   cursor: pointer;
@@ -96,6 +100,9 @@
   margin-bottom: 20px;
 }
 
+[data-theme="light"] .ado-description,
+[data-theme="light"] .sport-description { color: #4a5568; }
+
 .ado-stats {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
@@ -106,8 +113,8 @@
 .ado-stat {
   text-align: center;
   padding: 10px;
-  background: rgba(255, 107, 157, 0.1);
-  border: 1px solid rgba(255, 107, 157, 0.2);
+  background: rgba(255, 107, 157, 0.08);
+  border: 1px solid rgba(255, 107, 157, 0.25);
   border-radius: 8px;
 }
 
@@ -133,8 +140,8 @@
 }
 
 .song-card {
-  background: rgba(255, 107, 157, 0.1);
-  border: 1px solid rgba(255, 107, 157, 0.2);
+  background: rgba(255, 107, 157, 0.08);
+  border: 1px solid rgba(255, 107, 157, 0.25);
   border-radius: 8px;
   padding: 12px;
   transition: all 0.3s ease;
@@ -162,7 +169,7 @@
 .song-year {
   font-size: 0.65rem;
   color: #888;
-  background: rgba(255, 107, 157, 0.1);
+  background: rgba(255, 107, 157, 0.08);
   padding: 2px 6px;
   border-radius: 10px;
 }
@@ -172,16 +179,17 @@
   font-size: 0.75rem;
   line-height: 1.4;
 }
+[data-theme="light"] .song-reason { color: #4a5568; }
 
 .ado-impact, .sport-philosophy {
-  background: rgba(255, 107, 157, 0.05);
+  background: rgba(255, 107, 157, 0.06);
   border-radius: 8px;
   padding: 15px;
   border-left: 3px solid #ff6b9d;
 }
 
 .sport-philosophy {
-  background: rgba(0, 212, 255, 0.05);
+  background: rgba(0, 212, 255, 0.06);
   border-left-color: #00d4ff;
 }
 
@@ -209,8 +217,8 @@
 }
 
 .sport-stat-card {
-  background: rgba(0, 212, 255, 0.1);
-  border: 1px solid rgba(0, 212, 255, 0.2);
+  background: rgba(0, 212, 255, 0.08);
+  border: 1px solid rgba(0, 212, 255, 0.25);
   border-radius: 8px;
   padding: 10px;
   text-align: center;
@@ -229,6 +237,7 @@
   color: #ffffff;
   font-weight: 500;
 }
+[data-theme="light"] .sport-stat-card p { color: #2d3748; }
 
 .sport-achievements {
   margin-bottom: 20px;

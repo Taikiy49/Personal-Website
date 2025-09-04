@@ -4,6 +4,8 @@
   position: relative;
 }
 
+[data-theme="light"] .portfolio-section { background: transparent; }
+
 .resume-download {
   margin-top: 15px;
 }
@@ -37,9 +39,9 @@
 }
 
 .filter-btn {
-  background: rgba(26, 26, 46, 0.6);
-  border: 1px solid rgba(0, 212, 255, 0.2);
-  color: #b0b0b0;
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(0, 102, 204, 0.2);
+  color: #4a5568;
   padding: 8px 20px;
   border-radius: 20px;
   cursor: pointer;
@@ -164,6 +166,7 @@
   color: #ffffff;
   margin-bottom: 8px;
 }
+[data-theme="light"] .project-title { color: #1f2937; }
 
 .project-description {
   color: #c0c0c0;
@@ -171,6 +174,7 @@
   line-height: 1.5;
   margin-bottom: 15px;
 }
+[data-theme="light"] .project-description { color: #4a5568; }
 
 .project-tech {
   display: flex;
@@ -209,6 +213,7 @@
   color: #ffffff;
   transform: translateX(3px);
 }
+[data-theme="light"] .project-link:hover { color: #1f2937; }
 
 @media screen and (max-width: 768px) {
   .portfolio-grid {

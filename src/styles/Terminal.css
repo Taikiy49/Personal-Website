@@ -4,6 +4,8 @@
   position: relative;
 }
 
+[data-theme="light"] .terminal-section { background: transparent; }
+
 .terminal-container {
   max-width: 700px;
   margin: 0 auto;
@@ -12,6 +14,7 @@
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
+[data-theme="light"] .terminal-container { background: #ffffff; box-shadow: 0 10px 24px rgba(0,0,0,0.08); }
 
 .terminal-header {
   background: #2d2d2d;
@@ -21,6 +24,7 @@
   justify-content: space-between;
   border-bottom: 1px solid #444;
 }
+[data-theme="light"] .terminal-header { background: #f1f5f9; border-bottom-color: #e2e8f0; }
 
 .terminal-controls {
   display: flex;
@@ -68,6 +72,7 @@
   min-height: 200px;
   font-family: 'JetBrains Mono', monospace;
 }
+[data-theme="light"] .terminal-body { background: #ffffff; }
 
 .terminal-output {
   color: #00ff00;
@@ -76,6 +81,7 @@
   white-space: pre-wrap;
   word-wrap: break-word;
 }
+[data-theme="light"] .terminal-output { color: #0a7f00; }
 
 .terminal-cursor {
   color: #00d4ff;

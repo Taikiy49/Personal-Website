@@ -16,6 +16,7 @@
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
 }
+[data-theme="light"] .search-trigger { background: rgba(255,255,255,0.8); border-color: rgba(0,0,0,0.08); color: #4a5568; }
 
 .search-trigger:hover {
   border-color: rgba(0, 212, 255, 0.6);
@@ -50,6 +51,7 @@
   padding-top: 10vh;
   backdrop-filter: blur(5px);
 }
+[data-theme="light"] .search-overlay { background: rgba(0,0,0,0.35); }
 
 .search-modal {
   background: rgba(26, 26, 46, 0.95);
@@ -63,6 +65,7 @@
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
   animation: searchModalIn 0.3s ease-out;
 }
+[data-theme="light"] .search-modal { background: rgba(255,255,255,0.95); border-color: rgba(0,0,0,0.08); box-shadow: 0 20px 40px rgba(0,0,0,0.08); }
 
 @keyframes searchModalIn {
   from {
@@ -79,6 +82,7 @@
   padding: 20px;
   border-bottom: 1px solid rgba(0, 212, 255, 0.2);
 }
+[data-theme="light"] .search-header { border-bottom-color: rgba(0,0,0,0.06); }
 
 .search-input-container {
   display: flex;
@@ -89,6 +93,7 @@
   border-radius: 8px;
   padding: 12px;
 }
+[data-theme="light"] .search-input-container { background: rgba(255,255,255,0.9); border-color: rgba(0,0,0,0.08); }
 
 .search-icon {
   color: #00d4ff;
@@ -104,6 +109,7 @@
   outline: none;
   font-family: inherit;
 }
+[data-theme="light"] .search-input { color: #2d3748; }
 
 .search-input::placeholder {
   color: #888;
@@ -146,6 +152,7 @@
 .search-result:hover {
   background: rgba(0, 212, 255, 0.1);
 }
+[data-theme="light"] .search-result:hover { background: rgba(0,0,0,0.04); }
 
 .result-icon {
   font-size: 18px;
@@ -163,12 +170,14 @@
   font-weight: 600;
   margin-bottom: 2px;
 }
+[data-theme="light"] .result-title { color: #1f2937; }
 
 .result-type {
   color: #888;
   font-size: 0.75rem;
   text-transform: capitalize;
 }
+[data-theme="light"] .result-type { color: #6b7280; }
 
 .no-results {
   padding: 40px 20px;
@@ -222,6 +231,7 @@
   border-top: 1px solid rgba(0, 212, 255, 0.2);
   background: rgba(0, 0, 0, 0.2);
 }
+[data-theme="light"] .search-footer { background: rgba(0,0,0,0.03); border-top-color: rgba(0,0,0,0.06); }
 
 .search-shortcuts {
   display: flex;
@@ -229,6 +239,7 @@
   font-size: 0.7rem;
   color: #888;
 }
+[data-theme="light"] .search-shortcuts { color: #6b7280; }
 
 .search-shortcuts kbd {
   background: rgba(255, 255, 255, 0.1);
@@ -238,6 +249,7 @@
   font-size: 0.65rem;
   margin: 0 2px;
 }
+[data-theme="light"] .search-shortcuts kbd { background: rgba(0,0,0,0.04); border-color: rgba(0,0,0,0.1); }
 
 @media screen and (max-width: 768px) {
   .search-trigger {

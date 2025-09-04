@@ -4,6 +4,8 @@
   position: relative;
 }
 
+[data-theme="light"] .skills-section { background: transparent; }
+
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -43,6 +45,7 @@
   font-weight: 600;
   color: #ffffff;
 }
+[data-theme="light"] .category-title { color: #2d3748; }
 
 .skills-list {
   display: flex;
@@ -70,6 +73,7 @@
   color: #ffffff;
   font-size: 0.8rem;
 }
+[data-theme="light"] .skill-name { color: #2d3748; }
 
 .skill-percentage {
   font-size: 0.7rem;
@@ -79,7 +83,7 @@
 
 .skill-bar {
   height: 4px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.08);
   border-radius: 2px;
   overflow: hidden;
 }

@@ -4,6 +4,8 @@
   position: relative;
 }
 
+[data-theme="light"] .now-section { background: transparent; }
+
 .now-inspiration {
   margin-top: 10px;
 }
@@ -96,6 +98,7 @@
   color: #ffffff;
   margin-bottom: 4px;
 }
+[data-theme="light"] .activity-title { color: #2d3748; }
 
 .activity-status {
   font-size: 0.7rem;
@@ -109,6 +112,7 @@
   font-size: 0.8rem;
   line-height: 1.5;
 }
+[data-theme="light"] .activity-description { color: #4a5568; }
 
 .interests-grid {
   display: grid;
@@ -148,6 +152,7 @@
   font-size: 0.8rem;
   line-height: 1.4;
 }
+[data-theme="light"] .interest-list li { color: #4a5568; }
 
 .interest-list li::before {
   content: '▶';
@@ -171,6 +176,7 @@
   margin-bottom: 15px;
   position: relative;
 }
+[data-theme="light"] .now-quote blockquote { color: var(--neon-blue); }
 
 .now-quote blockquote::before,
 .now-quote blockquote::after {
@@ -186,6 +192,7 @@
   max-width: 600px;
   margin: 0 auto;
 }
+[data-theme="light"] .quote-context { color: #4a5568; }
 
 @media screen and (max-width: 768px) {
   .activities-grid,

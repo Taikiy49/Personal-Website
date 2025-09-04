@@ -4,6 +4,8 @@
   position: relative;
 }
 
+[data-theme="light"] .testimonials-section { background: transparent; }
+
 .testimonials-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -28,6 +30,7 @@
   color: rgba(0, 212, 255, 0.3);
   font-size: 24px;
 }
+[data-theme="light"] .quote-icon { color: rgba(0, 102, 204, 0.3); }
 
 .testimonial-rating {
   display: flex;
@@ -47,6 +50,7 @@
   margin-bottom: 20px;
   font-size: 0.85rem;
 }
+[data-theme="light"] .testimonial-quote { color: #4a5568; }
 
 .testimonial-author {
   display: flex;
@@ -72,6 +76,7 @@
   font-weight: 600;
   margin-bottom: 2px;
 }
+[data-theme="light"] .author-name { color: #1f2937; }
 
 .author-role {
   color: #00d4ff;
@@ -84,6 +89,7 @@
   color: #b0b0b0;
   font-size: 0.7rem;
 }
+[data-theme="light"] .author-company { color: #6b7280; }
 
 @media screen and (max-width: 768px) {
   .testimonials-grid {
