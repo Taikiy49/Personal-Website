@@ -10,6 +10,19 @@
   height: 50px;
 }
 
+.navbar::after {
+  /* subtle neon bottom bar */
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--neon-blue), var(--neon-indigo), var(--neon-purple));
+  opacity: 0.35;
+  pointer-events: none;
+}
+
 .navbar.scrolled {
   background: rgba(10, 10, 15, 0.95);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
@@ -76,12 +89,14 @@
   left: 0;
   width: 0;
   height: 1px;
-  background: linear-gradient(45deg, #00d4ff, #0099cc);
+  background: linear-gradient(90deg, var(--neon-blue), var(--neon-indigo));
   transition: width 0.3s ease;
+  box-shadow: 0 0 12px rgba(0, 212, 255, 0.35);
 }
 
 .nav-link:hover {
-  color: #00d4ff;
+  color: var(--neon-blue);
+  text-shadow: 0 0 10px rgba(0, 212, 255, 0.35);
 }
 
 .nav-link:hover::after {

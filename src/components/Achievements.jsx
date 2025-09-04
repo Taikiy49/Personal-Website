@@ -1,4 +1,4 @@
-import React from 'react';
+      import React from 'react';
 import { FaTrophy, FaMedal, FaStar, FaAward, FaGraduationCap, FaCode } from 'react-icons/fa';
 import '../styles/Achievements.css';
 

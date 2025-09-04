@@ -4,9 +4,25 @@
   box-sizing: border-box;
 }
 
+:root {
+  --neon-blue: #00d4ff;
+  --neon-cyan: #28fff3;
+  --neon-indigo: #5b6cff;
+  --neon-purple: #8a5cf6;
+  --neon-pink: #ff6b9d;
+  --deep-1: #0a0a0f;
+  --deep-2: #0f1419;
+  --deep-3: #16213e;
+  --deep-4: #1a1a2e;
+  --glass: rgba(26, 26, 46, 0.75);
+  --stroke: rgba(0, 212, 255, 0.3);
+  --glow-weak: 0 0 12px rgba(0, 212, 255, 0.35);
+  --glow-strong: 0 0 28px rgba(0, 212, 255, 0.5);
+}
+
 body {
   font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
-  background: #0a0a0f;
+  background: var(--deep-1);
   color: #ffffff;
   overflow-x: hidden;
   line-height: 1.4;
@@ -16,7 +32,37 @@ body {
 .app {
   position: relative;
   min-height: 100vh;
-  background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 25%, #16213e 50%, #0f1419 75%, #0a0a0f 100%);
+  /* Layered, animated deep-space gradient */
+  background:
+    radial-gradient(1200px 600px at 80% -10%, rgba(40, 255, 243, 0.12), transparent 60%),
+    radial-gradient(900px 500px at -10% 30%, rgba(91, 108, 255, 0.12), transparent 60%),
+    linear-gradient(135deg, var(--deep-1) 0%, var(--deep-4) 28%, var(--deep-3) 55%, var(--deep-2) 78%, var(--deep-1) 100%);
+}
+
+.app::before {
+  /* Soft moving neon beam */
+  content: '';
+  position: fixed;
+  inset: -20% -10%;
+  pointer-events: none;
+  background: conic-gradient(from 180deg at 70% 30%,
+    rgba(0, 212, 255, 0.10), rgba(138, 92, 246, 0.05), rgba(255, 107, 157, 0.06), rgba(0, 212, 255, 0.10));
+  filter: blur(40px);
+  animation: beam-drift 18s linear infinite;
+  opacity: 0.6;
+}
+
+.app::after {
+  /* Subtle neon grid */
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(transparent 95%, rgba(0, 212, 255, 0.07) 96%, transparent 97%),
+    linear-gradient(90deg, transparent 95%, rgba(0, 212, 255, 0.06) 96%, transparent 97%);
+  background-size: 100% 28px, 28px 100%;
+  mask-image: radial-gradient(1000px 600px at 50% 10%, black, transparent 70%);
 }
 
 /* Custom scrollbar */
@@ -29,8 +75,9 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(45deg, #00d4ff, #0099cc);
+  background: linear-gradient(45deg, var(--neon-blue), var(--neon-indigo), var(--neon-purple));
   border-radius: 2px;
+  box-shadow: var(--glow-weak);
 }
 
 /* Global animations */
@@ -43,6 +90,12 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+@keyframes beam-drift {
+  0% { transform: translate3d(-2%, -1%, 0) rotate(0deg); }
+  50% { transform: translate3d(2%, 1%, 0) rotate(180deg); }
+  100% { transform: translate3d(-2%, -1%, 0) rotate(360deg); }
 }
 
 @keyframes slideInLeft {
@@ -98,10 +151,11 @@ body {
 }
 
 .text-gradient {
-  background: linear-gradient(45deg, #00d4ff, #0099cc, #ffffff);
+  background: linear-gradient(90deg, var(--neon-blue), var(--neon-indigo), var(--neon-purple), var(--neon-pink));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  text-shadow: 0 0 8px rgba(0, 212, 255, 0.25);
 }
 
 /* Image styles for sections */
@@ -136,9 +190,9 @@ body {
 }
 
 .cyber-card {
-  background: rgba(26, 26, 46, 0.8);
+  background: var(--glass);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(0, 212, 255, 0.3);
+  border: 1px solid var(--stroke);
   border-radius: 8px;
   padding: 15px;
   position: relative;
@@ -153,7 +207,7 @@ body {
   left: -100%;
   width: 100%;
   height: 1px;
-  background: linear-gradient(90deg, transparent, #00d4ff, transparent);
+  background: linear-gradient(90deg, transparent, var(--neon-blue), var(--neon-purple), transparent);
   transition: left 0.5s ease;
 }
 
@@ -163,8 +217,8 @@ body {
 
 .cyber-card:hover {
   transform: translateY(-2px);
-  border-color: rgba(0, 212, 255, 0.6);
-  box-shadow: 0 8px 25px rgba(0, 212, 255, 0.2);
+  border-color: rgba(0, 212, 255, 0.55);
+  box-shadow: 0 8px 25px rgba(0, 212, 255, 0.25), inset 0 0 18px rgba(0, 212, 255, 0.08);
 }
 
 .section-header {
@@ -177,11 +231,12 @@ body {
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 8px;
-  background: linear-gradient(45deg, #00d4ff, #ffffff);
+  background: linear-gradient(90deg, var(--neon-blue), #e6faff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   position: relative;
+  text-shadow: 0 0 10px rgba(0, 212, 255, 0.35);
 }
 
 .section-title::after {
@@ -192,8 +247,9 @@ body {
   transform: translateX(-50%);
   width: 40px;
   height: 2px;
-  background: linear-gradient(45deg, #00d4ff, #0099cc);
+  background: linear-gradient(90deg, var(--neon-blue), var(--neon-indigo), var(--neon-purple));
   border-radius: 1px;
+  box-shadow: var(--glow-weak);
 }
 
 .section-subtitle {

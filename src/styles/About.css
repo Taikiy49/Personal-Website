@@ -1,6 +1,9 @@
 .about-section {
   padding: 40px 0;
-  background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 50%, #0a0a0f 100%);
+  background:
+    radial-gradient(700px 350px at 80% 10%, rgba(91,108,255,0.08), transparent 60%),
+    radial-gradient(600px 320px at 10% 30%, rgba(0,212,255,0.08), transparent 65%),
+    linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 50%, #0a0a0f 100%);
   position: relative;
 }
 
@@ -18,7 +21,7 @@
 .card-icon {
   width: 35px;
   height: 35px;
-  background: linear-gradient(45deg, #00d4ff, #0099cc);
+  background: linear-gradient(90deg, var(--neon-blue), var(--neon-indigo), var(--neon-purple));
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -26,6 +29,7 @@
   font-size: 16px;
   margin-bottom: 15px;
   animation: pulse 2s ease-in-out infinite;
+  box-shadow: var(--glow-weak);
 }
 
 .about-card h3 {
@@ -75,13 +79,14 @@
 .highlight-icon {
   width: 30px;
   height: 30px;
-  background: linear-gradient(45deg, #00d4ff, #0099cc);
+  background: linear-gradient(120deg, var(--neon-blue), var(--neon-indigo));
   border-radius: 6px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 12px;
   margin-bottom: 10px;
+  box-shadow: 0 0 14px rgba(0, 212, 255, 0.35);
 }
 
 .highlight-card h4 {
@@ -105,8 +110,8 @@
 .stat-card {
   text-align: center;
   padding: 15px;
-  background: rgba(26, 26, 46, 0.6);
-  border: 1px solid rgba(0, 212, 255, 0.2);
+  background: var(--glass);
+  border: 1px solid rgba(0, 212, 255, 0.25);
   border-radius: 8px;
   transition: all 0.3s ease;
   animation: fadeInUp 0.8s ease-out 0.6s both;
@@ -114,14 +119,14 @@
 
 .stat-card:hover {
   transform: translateY(-3px);
-  border-color: rgba(0, 212, 255, 0.5);
-  box-shadow: 0 10px 20px rgba(0, 212, 255, 0.2);
+  border-color: rgba(0, 212, 255, 0.55);
+  box-shadow: 0 10px 22px rgba(0, 212, 255, 0.25), inset 0 0 18px rgba(0, 212, 255, 0.08);
 }
 
 .stat-card .stat-number {
   font-size: 1.6rem;
   font-weight: 700;
-  color: #00d4ff;
+  color: var(--neon-blue);
   margin-bottom: 4px;
   display: block;
 }
