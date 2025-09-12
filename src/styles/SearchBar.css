@@ -257,6 +257,7 @@
     right: 80px;   /* was 15px — move left to make room for the toggle */
     padding: 6px 10px;
     font-size: 0.7rem;
+    height: 25px;
   }
 
   .search-hint { display: none; }

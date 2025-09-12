@@ -26,11 +26,10 @@
 }
 
 .toggle-thumb {
-  width: 26px;
-  height: 26px;
+  width: 29px;
+  height: 29px;
   border-radius: 50%;
   position: absolute;
-  top: 2px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -40,7 +39,6 @@
 }
 
 .toggle-thumb.dark {
-  left: 2px;
   background: linear-gradient(45deg, #1a1a2e, #0a0a0f);
   border: 1px solid rgba(0, 212, 255, 0.3);
 }
@@ -105,8 +103,8 @@
   }
   
   .toggle-thumb {
-    width: 21px;
-    height: 21px;
+    width: 23px;
+    height: 23px;
     font-size: 10px;
   }
   
