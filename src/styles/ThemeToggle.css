@@ -114,3 +114,7 @@
     left: 27px;
   }
 }
+@media screen and (max-width: 380px) {
+  .theme-toggle { top: 60px; right: 15px; }
+  .search-trigger { top: 100px; right: 15px; } /* drops below the toggle */
+}

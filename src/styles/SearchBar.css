@@ -254,30 +254,16 @@
 @media screen and (max-width: 768px) {
   .search-trigger {
     top: 60px;
-    right: 15px;
+    right: 80px;   /* was 15px — move left to make room for the toggle */
     padding: 6px 10px;
     font-size: 0.7rem;
   }
-  
-  .search-hint {
-    display: none;
-  }
-  
-  .search-modal {
-    width: 95%;
-    margin: 0 10px;
-  }
-  
-  .search-header {
-    padding: 15px;
-  }
-  
-  .search-input-container {
-    padding: 10px;
-  }
-  
-  .search-shortcuts {
-    gap: 15px;
-    flex-wrap: wrap;
-  }
+
+  .search-hint { display: none; }
+
+  .search-modal { width: 95%; margin: 0 10px; }
+  .search-header { padding: 15px; }
+  .search-input-container { padding: 10px; }
+  .search-shortcuts { gap: 15px; flex-wrap: wrap; }
 }
+
