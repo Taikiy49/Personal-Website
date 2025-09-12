@@ -84,7 +84,7 @@ const Hero = () => {
             <div className="profile-container">
               <div className="profile-ring"></div>
               <div className="profile-ring-2"></div>
-              <img src="taiki-img.png" 
+              <img src="taiki18.jpg" 
                    alt="Taiki Yamashita" className="profile-image" />
               <div className="floating-icons">
                 <div className="floating-icon music"><FaMusic /></div>
