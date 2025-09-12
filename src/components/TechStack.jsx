@@ -87,7 +87,7 @@ const TechStack = () => {
           <h2 className="section-title">Technology Arsenal</h2>
           <p className="section-subtitle">The tools I use to build the future</p>
           <div className="tech-hero-image">
-            <img src="https://images.pexels.com/photos/1181677/pexels-photo-1181677.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Technology stack" />
+            <img src="taiki33.png" alt="Technology stack" />
           </div>
         </div>
 

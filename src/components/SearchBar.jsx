@@ -2,6 +2,24 @@ import React, { useState, useEffect, useRef } from 'react';
 import { FaSearch, FaTimes } from 'react-icons/fa';
 import '../styles/SearchBar.css';
 
+const searchableContent = [
+  { type: 'section', title: 'About Me', id: 'about', content: 'software engineer hawaii japanese ado music golf pickleball' },
+  { type: 'section', title: 'Experience', id: 'experience', content: 'geolabs software engineer intern nsf research uc irvine' },
+  { type: 'section', title: 'Tech Stack', id: 'techstack', content: 'python javascript react flask ai machine learning' },
+  { type: 'section', title: 'Projects', id: 'projects', content: 'ado music golf pickleball gym fitness travel japan' },
+  { type: 'section', title: 'Portfolio', id: 'portfolio', content: 'geolabs platform ai health data golf analytics' },
+  { type: 'section', title: 'Blog', id: 'blog', content: 'ai search music golf healthcare machine learning' },
+  { type: 'section', title: 'Contact', id: 'contact', content: 'email phone linkedin github connect' },
+  { type: 'skill', title: 'Python Programming', content: 'python flask tensorflow scikit-learn pandas numpy' },
+  { type: 'skill', title: 'AI & Machine Learning', content: 'artificial intelligence machine learning tensorflow pytorch' },
+  { type: 'skill', title: 'React Development', content: 'react javascript typescript frontend web development' },
+  { type: 'project', title: 'Geolabs Software Platform', content: 'enterprise ai document management microsoft sso ocr' },
+  { type: 'project', title: 'Health Data Analysis', content: 'nsf research 400k health records machine learning prediction' },
+  { type: 'interest', title: 'Ado Music', content: 'ado japanese singer usseewa show gira gira music' },
+  { type: 'interest', title: 'Golf', content: 'golf ala wai course hawaii handicap breaking 90' },
+  { type: 'interest', title: 'Japan Travel', content: 'japan tokyo kyoto japanese culture heritage family' }
+];
+
 const SearchBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [query, setQuery] = useState('');
@@ -10,23 +28,6 @@ const SearchBar = () => {
   const inputRef = useRef(null);
 
   // Sample searchable content
-  const searchableContent = [
-    { type: 'section', title: 'About Me', id: 'about', content: 'software engineer hawaii japanese ado music golf pickleball' },
-    { type: 'section', title: 'Experience', id: 'experience', content: 'geolabs software engineer intern nsf research uc irvine' },
-    { type: 'section', title: 'Tech Stack', id: 'techstack', content: 'python javascript react flask ai machine learning' },
-    { type: 'section', title: 'Projects', id: 'projects', content: 'ado music golf pickleball gym fitness travel japan' },
-    { type: 'section', title: 'Portfolio', id: 'portfolio', content: 'geolabs platform ai health data golf analytics' },
-    { type: 'section', title: 'Blog', id: 'blog', content: 'ai search music golf healthcare machine learning' },
-    { type: 'section', title: 'Contact', id: 'contact', content: 'email phone linkedin github connect' },
-    { type: 'skill', title: 'Python Programming', content: 'python flask tensorflow scikit-learn pandas numpy' },
-    { type: 'skill', title: 'AI & Machine Learning', content: 'artificial intelligence machine learning tensorflow pytorch' },
-    { type: 'skill', title: 'React Development', content: 'react javascript typescript frontend web development' },
-    { type: 'project', title: 'Geolabs Software Platform', content: 'enterprise ai document management microsoft sso ocr' },
-    { type: 'project', title: 'Health Data Analysis', content: 'nsf research 400k health records machine learning prediction' },
-    { type: 'interest', title: 'Ado Music', content: 'ado japanese singer usseewa show gira gira music' },
-    { type: 'interest', title: 'Golf', content: 'golf ala wai course hawaii handicap breaking 90' },
-    { type: 'interest', title: 'Japan Travel', content: 'japan tokyo kyoto japanese culture heritage family' }
-  ];
 
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -51,17 +52,18 @@ const SearchBar = () => {
     }
   }, [isOpen]);
 
-  useEffect(() => {
-    if (query.length > 1) {
-      const filtered = searchableContent.filter(item =>
-        item.title.toLowerCase().includes(query.toLowerCase()) ||
-        item.content.toLowerCase().includes(query.toLowerCase())
-      ).slice(0, 8);
-      setResults(filtered);
-    } else {
-      setResults([]);
-    }
-  }, [query, searchableContent]);
+ useEffect(() => {
+  if (query.length > 1) {
+    const q = query.toLowerCase();
+    const filtered = searchableContent.filter(item =>
+      item.title.toLowerCase().includes(q) ||
+      item.content.toLowerCase().includes(q)
+    ).slice(0, 8);
+    setResults(filtered);
+  } else {
+    setResults([]);
+  }
+}, [query]);
 
   const handleResultClick = (result) => {
     if (result.id) {

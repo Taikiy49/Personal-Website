@@ -170,7 +170,7 @@ const Projects = () => {
           <div className="passion-content">
             <div className="ado-showcase cyber-card">
               <div className="passion-image">
-                <img src="https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Music and creativity" />
+                <img src="taiki20.jpg" alt="Music and creativity" />
               </div>
               <div className="ado-header">
                 <div className="ado-icon">
@@ -224,8 +224,8 @@ const Projects = () => {
             <div className="sport-showcase cyber-card">
               <div className="passion-image">
                 <img src={activeTab === 'golf' 
-                  ? "https://images.pexels.com/photos/1325735/pexels-photo-1325735.jpeg?auto=compress&cs=tinysrgb&w=400"
-                  : "https://images.pexels.com/photos/8007401/pexels-photo-8007401.jpeg?auto=compress&cs=tinysrgb&w=400"
+                  ? "taiki34.jpg"
+                  : "taiki2.jpg"
                 } alt={activeTab === 'golf' ? 'Golf course' : 'Pickleball court'} />
               </div>
               <div className="sport-header">
@@ -270,7 +270,7 @@ const Projects = () => {
           <div className="passion-content">
             <div className="sport-showcase cyber-card">
               <div className="passion-image">
-                <img src="https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Gym and fitness" />
+                <img src="taiki23.jpg" alt="Gym and fitness" />
               </div>
               <div className="sport-header">
                 <div className="sport-icon">
@@ -314,7 +314,7 @@ const Projects = () => {
           <div className="passion-content">
             <div className="sport-showcase cyber-card">
               <div className="passion-image">
-                <img src="https://images.pexels.com/photos/161401/fushimi-inari-taisha-shrine-kyoto-japan-temple-161401.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Travel and Japan" />
+                <img src="taiki27.png" alt="Travel and Japan" />
               </div>
               <div className="sport-header">
                 <div className="sport-icon">

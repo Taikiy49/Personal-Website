@@ -15,6 +15,11 @@
   margin-bottom: 30px;
 }
 
+.about-image{
+  margin: 0 auto;
+}
+
+
 .about-card {
   animation: fadeInUp 0.8s ease-out 0.2s both;
 }
