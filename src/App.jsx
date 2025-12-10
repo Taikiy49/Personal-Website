@@ -10,11 +10,8 @@ import Contact from './components/Contact';
 import CodeMatrix from './components/CodeMatrix';
 import TechStack from './components/TechStack';
 import Achievements from './components/Achievements';
-import Blog from './components/Blog';
 import Terminal from './components/Terminal';
 import Portfolio from './components/Portfolio';
-import Testimonials from './components/Testimonials';
-import CodeSnippets from './components/CodeSnippets';
 import PhotoGallery from './components/PhotoGallery';
 import NowPage from './components/NowPage';
 import FunFacts from './components/FunFacts';
@@ -45,14 +42,10 @@ const App = () => {
               <Experience />
               <Portfolio />
               <Projects />
-              <CodeSnippets />
               <Achievements />
-              <Testimonials />
-              <Blog />
               <PhotoGallery />
               <FunFacts />
               <Terminal />
-              <Newsletter />
               <Contact />
             </>
           } />
