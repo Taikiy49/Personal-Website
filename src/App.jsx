@@ -17,7 +17,6 @@ import NowPage from './components/NowPage';
 import FunFacts from './components/FunFacts';
 import ThemeToggle from './components/ThemeToggle';
 import SearchBar from './components/SearchBar';
-import Newsletter from './components/Newsletter';
 import ScrollToTop from './components/ScrollToTop';
 import './styles/App.css';
 
